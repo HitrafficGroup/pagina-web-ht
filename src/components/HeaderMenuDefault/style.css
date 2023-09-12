@@ -22,3 +22,8 @@
   color: #5DADE2 !important;
   cursor: pointer;
 }
+.active-url{
+  color: #2ECC71 !important;
+  font-weight: bold;
+  font-size: var(--label-medium-label-font-size);
+}

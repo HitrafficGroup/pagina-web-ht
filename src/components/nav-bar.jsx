@@ -1,8 +1,14 @@
-
+import { useEffect } from "react";
 import { HeaderMenuDefault } from "./HeaderMenuDefault";
 import { Button } from "./Button";
+import {  useLocation } from 'react-router-dom';
 export default function NavBar(){
 
+    const location = useLocation();
+
+    useEffect(() => {
+      console.log(location)
+    }, []);
     return(
         <>
             <div className="header">
@@ -14,11 +20,18 @@ export default function NavBar(){
             
           </p>
           <div className="middle-nav-items">
-            <HeaderMenuDefault className="design-component-instance-node" text="Informacion" />
-            <HeaderMenuDefault className="design-component-instance-node" text="Productos" />
-            <HeaderMenuDefault className="design-component-instance-node" text="Servicios" />
-            <HeaderMenuDefault className="design-component-instance-node" text="Mision" />
-            <HeaderMenuDefault className="design-component-instance-node" text="Acerca de Nosotros" />
+          {menu_data.map((item) => {
+              const active = item.path ? (location.pathname === item.path) : false;
+
+              return (
+                <HeaderMenuDefault className="design-component-instance-node"
+                  text={item.name}
+                  path={item.path}
+                  estatus={active}
+                />
+              );
+            })}
+
           </div>
           <Button className="button-instance" size="medium" text="Cotizar" type="primary" variant="filled" />
         </div>
@@ -28,3 +41,28 @@ export default function NavBar(){
         </>
     );
 }
+
+const menu_data = [
+  {
+    name:"Inicio",
+    path:"/"
+  },
+  {
+    name:"Productos",
+    path:"/productos"
+  },
+  {
+    name:"Servicios",
+    path:"/servicios"
+  },
+  {
+    name:"Casos de Exito",
+    path:"/blog"
+  },
+  {
+    name:"Acerca de Nosotros",
+    path:"/acerca_nosotros"
+  },
+ 
+
+]
