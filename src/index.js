@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import "./styleguide.css";
+import "./style.css";
 import App from './App';
 import { createTheme,ThemeProvider  } from '@mui/material/styles';
 
