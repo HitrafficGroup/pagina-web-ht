@@ -1,45 +1,54 @@
-export default function Footer(){
+import { Grid } from "@mui/material"
+export default function Footer() {
 
-    return(<>
-    
-    <div className="footer-big">
-                    <div className="big-footer">
-                        <div className="col">
-                            <div className="text-wrapper-4">Company</div>
-                            <div className="list-items">
-                                <div className="text-wrapper-5">About Us</div>
-                                <div className="text-wrapper-6">Blog</div>
-                                <div className="text-wrapper-6">Careers</div>
-                                <div className="text-wrapper-6">Contact Us</div>
-                            </div>
+    return (
+        <>
+            <div className="footer-big">
+                <Grid  container spacing={3} >
+                    <Grid  textAlign={"center"} item xs={12} md={4}>
+                        <h3 style={{color:"white"}}>Company</h3>
+                        <div className="list-items">
+                            <div className="text-wrapper-5">About Us</div>
+                            <div className="text-wrapper-6">Blog</div>
+                            <div className="text-wrapper-6">Careers</div>
+                            <div className="text-wrapper-6">Contact Us</div>
                         </div>
-                        <div className="col">
-                            <div className="text-wrapper-4">Support</div>
-                            <div className="list-items">
-                                <div className="text-wrapper-5">Help Center</div>
-                                <div className="text-wrapper-6">Safety Center</div>
-                                <div className="text-wrapper-6">Community Guidelines</div>
-                            </div>
+
+                    </Grid>
+                    <Grid   textAlign={"center"} item xs={12} md={4}>
+
+                    <h3 style={{color:"white"}}>Support</h3>
+                        <div className="list-items">
+                            <div className="text-wrapper-5">Help Center</div>
+                            <div className="text-wrapper-6">Safety Center</div>
+                            <div className="text-wrapper-6">Community Guidelines</div>
                         </div>
-                        <div className="col-2">
-                            <div className="text-wrapper-4">Legal</div>
-                            <div className="list-items">
-                                <div className="text-wrapper-5">Cookies Policy</div>
-                                <div className="text-wrapper-6">Privacy Policy</div>
-                                <div className="text-wrapper-6">Terms of Service</div>
-                                <div className="text-wrapper-6">Law Enforcement</div>
-                            </div>
+
+                    </Grid>
+                    <Grid   textAlign={"center"} item xs={12} md={4}>
+
+                    <h3 style={{color:"white"}}>Legal</h3>
+                        <div className="list-items">
+                            <div className="text-wrapper-5">Cookies Policy</div>
+                            <div className="text-wrapper-6">Privacy Policy</div>
+                            <div className="text-wrapper-6">Terms of Service</div>
+                            <div className="text-wrapper-6">Law Enforcement</div>
                         </div>
-                    </div>
-                    <img
-                        className="divider"
-                        alt="Divider"
-                        src="https://cdn.animaapp.com/projects/65007d9a904ea957862af503/releases/65007dd76963f7376cdc05aa/img/divider.svg"
-                    />
-                    <div className="small-footer">
-                        <p className="p">© 2023 Hitraffic Group Derechos Reservados</p>
-                    </div>
-                </div>
-    
-    </>)
+
+                    </Grid>
+
+                    <Grid  textAlign={"center"} item xs={12}>
+                        <img
+                            className="divider"
+                            alt="Divider"
+                            src="https://cdn.animaapp.com/projects/65007d9a904ea957862af503/releases/65007dd76963f7376cdc05aa/img/divider.svg"
+                        />
+                        <div className="small-footer">
+                            <h4 style={{color:"white"}}>© 2023 Hitraffic Group Derechos Reservados</h4>
+                        </div>
+                    </Grid>
+                </Grid>
+            </div>
+
+        </>)
 }

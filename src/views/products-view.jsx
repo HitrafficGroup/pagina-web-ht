@@ -1,10 +1,11 @@
 export default function ProductsView(){
 
 
-    return(<>
-    
-    
-    la vista de productos
-    
-    </>);
+    return(
+    <>
+        <h1>
+            la vista de productos
+        </h1>
+    </>
+    );
 }

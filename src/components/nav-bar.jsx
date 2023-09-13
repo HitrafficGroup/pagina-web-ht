@@ -1,24 +1,24 @@
-import { useEffect } from "react";
+
 import { HeaderMenuDefault } from "./HeaderMenuDefault";
 import { Button } from "./Button";
 import {  useLocation } from 'react-router-dom';
+import Logo from '../assets/logo.png'
+import { useMediaQuery } from "@mui/material";
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
 export default function NavBar(){
-
+    const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
     const location = useLocation();
 
-    useEffect(() => {
-      console.log(location)
-    }, []);
-    return(
+    if (lgUp) {
+      return(
         <>
-            <div className="header">
+        <div className="header">
         <div className="header-content">
-        <p className="hi-traffic">
-            <span className="span">Hi</span>
-            <span className="text-wrapper-2">-</span>
-            <span className="text-wrapper-3">Traffic</span>
-            
-          </p>
+          <img src={Logo} height={70} alt="" />
           <div className="middle-nav-items">
           {menu_data.map((item) => {
               const active = item.path ? (location.pathname === item.path) : false;
@@ -40,6 +40,22 @@ export default function NavBar(){
          
         </>
     );
+    }else{
+      return(
+        <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar variant="dense"  sx={{backgroundColor:"white" ,padding:2}}>
+            <IconButton edge="start" color="primary" aria-label="menu" sx={{ mr: 2 }}>
+              <MenuIcon />
+            </IconButton>
+            <img src={Logo} height={40} alt="" />
+          </Toolbar>
+        </AppBar>
+      </Box>
+      );
+    
+    }
+    
 }
 
 const menu_data = [
