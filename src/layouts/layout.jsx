@@ -42,13 +42,16 @@ export const Layout=(props)=>{
   return (
     <>
       <NavBar  />
+    
 
+  
       <LayoutRoot>
         <LayoutContainer>
           {children}
         </LayoutContainer>
       </LayoutRoot>
       <Footer/>
+    
     </>
   );
 };

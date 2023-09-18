@@ -1,4 +1,4 @@
-import './App.css';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeView from './views/home-view';
 import ProductsView from './views/products-view';
@@ -9,9 +9,9 @@ import AboutView from './views/about-view';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter >
 
-      
+        <div className='background-container'>
         <Layout>
         <Routes>
                 <Route path='/' element={<HomeView />} />
@@ -21,6 +21,8 @@ function App() {
                 <Route path='*' element={<NotFound />} />
               </Routes>
         </Layout>
+        </div>
+        
              
     
         

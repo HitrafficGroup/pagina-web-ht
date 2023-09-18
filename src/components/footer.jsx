@@ -1,4 +1,7 @@
 import { Grid } from "@mui/material"
+import wsp from "../assets/wsp.png";
+// import Fab from '@mui/material/Fab';
+// import EditIcon from '@mui/icons-material/Edit';
 export default function Footer() {
 
     return (
@@ -49,6 +52,7 @@ export default function Footer() {
                     </Grid>
                 </Grid>
             </div>
+            <img src={wsp}  className="wsp-btn" alt="" />
 
         </>)
 }
