@@ -5,8 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useLocation } from 'react-router-dom';
 export default function HeaderMenuDefault(props) {
 	const { text = "Menu Item", className, path = '/', estatus = false, child = false, childrens = [] } = props;
+	const location = useLocation();
 	const navigate = useNavigate();
 	const cambiarVista = () => {
 		navigate(path);
@@ -16,15 +18,26 @@ export default function HeaderMenuDefault(props) {
 	const handleClick = (event) => {
 		setAnchorEl(event.currentTarget);
 	};
+	
 	const handleClose = () => {
 		setAnchorEl(null);
 	};
+	const secondMenu = (child_path)=>{
+		setAnchorEl(null);
+		const active = location.pathname 
+		console.log(active)
+		navigate(child_path);
+	}
 
 	if (child) {
+		let active = false
+		if(location.pathname !== '/' ){
+			active = path ? (location.pathname.match(/^\/\w+/)[0] === path) : false;
+		}
 		return (
 		<div>
 			<div className={`header-menu-default ${className}`}>
-			<div className={estatus ? "active-url" : "text-wrapper"} aria-expanded={open ? 'true' : undefined} aria-haspopup="true"	aria-controls={open ? 'basic-menu' : undefined} onClick={handleClick}>
+			<div className={active ? "active-url" : "text-wrapper"} aria-expanded={open ? 'true' : undefined} aria-haspopup="true"	aria-controls={open ? 'basic-menu' : undefined} onClick={handleClick}>
 				
 				{text}
 				<KeyboardArrowDownIcon/>
@@ -41,8 +54,9 @@ export default function HeaderMenuDefault(props) {
 				}}
 			>
 				{childrens.map((item)=>{
+					const active = item.path ? (location.pathname === item.path) : false;
 					return(
-						<MenuItem onClick={handleClose}>{item.name}</MenuItem>
+						<MenuItem onClick={()=>{secondMenu(item.path)}} sx={{color: active?"#2ECC71":""}} >{item.name}</MenuItem>
 
 					)
 				})}

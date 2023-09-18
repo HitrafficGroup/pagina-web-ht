@@ -8,12 +8,14 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import NavItem from './nav-item';
-
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import ShoppingBasketSharpIcon from '@mui/icons-material/ShoppingBasketSharp';
+import DesignServicesSharpIcon from '@mui/icons-material/DesignServicesSharp';
+import ThumbUpAltSharpIcon from '@mui/icons-material/ThumbUpAltSharp';
+import InfoSharpIcon from '@mui/icons-material/InfoSharp';
 export default function NavBar() {
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
   const location = useLocation();
@@ -41,6 +43,7 @@ export default function NavBar() {
                     child={item.child}
                     childrens={item.childrens}
                     auxClick={toggleDrawer(false)}
+                    icon={item.icon}
                   />
                 );
           })}
@@ -96,8 +99,7 @@ export default function NavBar() {
       <Drawer
             anchor={'left'}
             open={open}
-            
-      
+            onClose={toggleDrawer(false)}
           >
             {list('left')}
           </Drawer>
@@ -116,12 +118,14 @@ const menu_data = [
     name: "Inicio",
     path: "/",
     child:false,
-    childrens:[]
+    icon: <HomeRoundedIcon/>,
+    childrens:[],
   },
   {
     name: "Productos",
     path: "/productos",
     child:true,
+    icon: <ShoppingBasketSharpIcon/>,
     childrens:[
       {
         name:"Radios",
@@ -145,9 +149,10 @@ const menu_data = [
     name: "Servicios",
     path: "/servicios",
     child:true,
+    icon: <DesignServicesSharpIcon/>,
     childrens:[
       {
-        name:"Semaforizacion",
+        name:"Semaforización",
         path:"/servicios/semaforizacion",
       },
       {
@@ -159,7 +164,7 @@ const menu_data = [
         path:"/servicios/plataforma",
       },
       {
-        name:"Automatizacion",
+        name:"Automatización",
         path:"/servicios/automatizacion",
       },
       {
@@ -169,15 +174,17 @@ const menu_data = [
     ]
   },
   {
-    name: "Casos de Exito",
+    name: "Casos de Éxito",
     path: "/blog",
     child:false,
+    icon: <ThumbUpAltSharpIcon/>,
     childrens:[]
   },
   {
     name: "Acerca de Nosotros",
     path: "/acerca_nosotros",
     child:false,
+    icon: <InfoSharpIcon/>,
     childrens:[]
   },
 

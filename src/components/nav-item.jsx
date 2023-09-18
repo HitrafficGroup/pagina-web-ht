@@ -4,16 +4,14 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListItem from '@mui/material/ListItem';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import PropTypes from "prop-types";
 import Collapse from '@mui/material/Collapse';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
+
+
 export default function NavItem(props) {
-    const { text = "Menu Item", className, path = '/', estatus = false, child = false, childrens = [],auxClick } = props;
+    const { text = "Menu Item", estatus = false, child = false, childrens = [],auxClick,icon} = props;
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {
@@ -23,20 +21,24 @@ export default function NavItem(props) {
         return(
             <>
             <ListItemButton onClick={handleClick}>
-                    <ListItemIcon>
-                    <InboxIcon />
+                    <ListItemIcon sx={{color: estatus?"#2ECC71":""}}>
+                   {icon}
                     </ListItemIcon>
-                    <ListItemText primary={text} />
+                    <ListItemText sx={{color: estatus?"#2ECC71":""}}  primary={text} />
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Collapse in={open} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>
-                    <ListItemButton sx={{ pl: 4 }} onClick={auxClick}>
-                        <ListItemIcon>
-                        <StarBorder />
-                        </ListItemIcon>
-                        <ListItemText primary="Starred" />
-                    </ListItemButton>
+                    <List  sx={{listStyleType:"circle"}} component="div" disablePadding>
+                    {childrens.map((item)=>{
+                        return(
+                            <>
+                              <ListItemButton sx={{ pl: 4 }} onClick={auxClick}>
+                                <ListItemText primary={item.name} />
+                            </ListItemButton>
+                            </>
+                        );
+                    })}
+                  
                     </List>
                 </Collapse>
             </>
@@ -48,10 +50,10 @@ export default function NavItem(props) {
             <>
                 <ListItem disablePadding>
                     <ListItemButton onClick={auxClick}>
-                        <ListItemIcon>
-                            <InboxIcon />
+                        <ListItemIcon sx={{color: estatus?"#2ECC71":""}}>
+                          {icon}
                         </ListItemIcon>
-                        <ListItemText primary={text} />
+                        <ListItemText   sx={{color: estatus?"#2ECC71":""}} primary={text} />
                     </ListItemButton>
                 </ListItem>
     
@@ -63,10 +65,10 @@ export default function NavItem(props) {
 
 NavItem.propTypes = {
 	text: PropTypes.string,
-	path: PropTypes.string,
 	estatus: PropTypes.bool,
 	child: PropTypes.bool,
 	childrens: PropTypes.array,
-    auxClick: PropTypes.func
+    auxClick: PropTypes.func,
+    icon:PropTypes.any,
 };
 

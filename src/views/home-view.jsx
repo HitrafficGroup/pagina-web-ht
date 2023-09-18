@@ -105,7 +105,7 @@ export default function HomeView() {
                 </div>
             </div>
             <div className="section-content">
-                <div className="section-padding-right">
+                <div className="section-padding-rigth">
                     <div className="content-group-rigth ">
 
                     <img

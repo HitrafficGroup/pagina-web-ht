@@ -97,8 +97,8 @@ const NotFound = () => {
         <Image src={ImageScarecrow} alt=""/>
       </div>
       <Info>
-        <h2>Te Tengo Malas Noticias</h2>
-        <p>La página que estás tratando de buscar, posiblemente no exista o este en mantenimiento.</p>
+        <h2 style={{color:'white'}} >Te Tengo Malas Noticias</h2>
+        <p style={{color:'white'}}>La página que estás tratando de buscar, posiblemente no exista o este en mantenimiento.</p>
         <Button>Regresar al Inicio</Button>
       </Info>
     </Main>
