@@ -40,8 +40,9 @@ export default function HeaderMenuDefault(props) {
 			<div className={active ? "active-url" : "text-wrapper"} aria-expanded={open ? 'true' : undefined} aria-haspopup="true"	aria-controls={open ? 'basic-menu' : undefined} onClick={handleClick}>
 				
 				{text}
-				<KeyboardArrowDownIcon/>
+				
 				</div>
+				<KeyboardArrowDownIcon/>
 			</div>
 			
 			<Menu
@@ -66,7 +67,7 @@ export default function HeaderMenuDefault(props) {
 		);
 	} else {
 		return (
-			<div className={`header-menu-default ${className}`}>
+			<div className={`header-menu-default`}>
 				<div className={estatus ? "active-url" : "text-wrapper"} onClick={cambiarVista}>{text}</div>
 			</div>
 		);

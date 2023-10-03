@@ -1,18 +1,20 @@
-
+ 
 .background-container{
   background-color: #192334;
   background-image: url("./assets/semaforos5.jpg");
-
+  padding: 0;
+  margin: 0;
 
 }
 
 
 .header {
- 
-  background-color: #000000;
   height: 72px;
   width: 100%;
   padding-block: 1rem;
+  position: fixed;
+  z-index: 999999 !important;
+  top: 0;
 }
 .header-content{
   display: flex;
@@ -176,14 +178,12 @@ justify-content: end;
 
  .footer-big {
   align-items: center;
-/* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-
-
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
   padding-top: 4rem;
@@ -328,47 +328,64 @@ backdrop-filter: blur(5px);
   margin: 0;
 }
 
+.slide{
+  width: 100%;
+  height: 100%;
+}
+.slide2{
+  background-image: url("./assets/road2.jpg");
+  background-size:contain;
+  height: 100%;
+  width: 100%;
+}
 .header-menu-default {
+
   align-items: center;
-  display: inline-flex;
+  display: flex;
+  text-align: center;
+  justify-content: center;
   gap: 10px;
 
 }
 
-.header-menu-default .text-wrapper {
+.header-menu-default {
   color: white;
-  font-family: var(--label-medium-label-font-family);
-  font-size: var(--label-medium-label-font-size);
-  font-style: var(--label-medium-label-font-style);
-  font-weight: var(--label-medium-label-font-weight);
-  letter-spacing: var(--label-medium-label-letter-spacing);
-  line-height: var(--label-medium-label-line-height);
-  margin-top: -1px;
-  white-space: nowrap;
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.text-wrapper:hover {
-  color: #5DADE2 !important;
+.text-wrapper {
+  color: white;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.text-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+  cursor: pointer;
+}
+.text-wrapper:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
   cursor: pointer;
 }
 .active-url{
-
-  font-family: var(--label-medium-label-font-family);
-  font-size: var(--label-medium-label-font-size);
-  font-style: var(--label-medium-label-font-style);
-  font-weight: var(--label-medium-label-font-weight);
-  letter-spacing: var(--label-medium-label-letter-spacing);
-  line-height: var(--label-medium-label-line-height);
-  margin-top: -1px;
-  white-space: nowrap;
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-  color: #2ECC71 !important;
-  font-size: var(--label-medium-label-font-size);
+ color: white;
+  position: relative;
+  text-decoration: none;
   cursor: pointer;
 }
 

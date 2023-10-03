@@ -54,7 +54,7 @@ export default function NavBar() {
   if (lgUp) {
     return (
       <>
-        <div className="header">
+        <div className="header" style={{background:"rgb(0, 0, 0,0.2)"}} >
           <div className="header-content">
             <img src={Logo} height={70} alt="" />
             <div className="middle-nav-items">
