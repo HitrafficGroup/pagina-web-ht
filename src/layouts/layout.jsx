@@ -41,10 +41,7 @@ export const Layout=(props)=>{
 
   return (
     <>
-      <NavBar  />
-    
-
-  
+      <NavBar  />  
       <LayoutRoot>
         <LayoutContainer>
           {children}

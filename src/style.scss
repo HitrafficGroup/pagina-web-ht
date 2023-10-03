@@ -9,8 +9,7 @@
 
 .header {
  
-  background-color: #ffffff;
-  box-shadow: 0px 1px 0px #e5e9f2;
+  background-color: #000000;
   height: 72px;
   width: 100%;
   padding-block: 1rem;
@@ -214,7 +213,7 @@ backdrop-filter: blur(5px);
 }
 
  .text-wrapper-5 {
-  color: var(--text-gray-200);
+  color: white;
   font-family: var(--body-body-2-font-family);
   font-size: var(--body-body-2-font-size);
   font-style: var(--body-body-2-font-style);
@@ -337,7 +336,7 @@ backdrop-filter: blur(5px);
 }
 
 .header-menu-default .text-wrapper {
-  color: var(--text-gray-900);
+  color: white;
   font-family: var(--label-medium-label-font-family);
   font-size: var(--label-medium-label-font-size);
   font-style: var(--label-medium-label-font-style);

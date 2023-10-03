@@ -87,7 +87,7 @@ export default function NavBar() {
       <>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
-          <Toolbar variant="dense" sx={{ backgroundColor: "white", padding: 2 }}>
+          <Toolbar variant="dense" sx={{ backgroundColor: "black", padding: 2 }}>
             <IconButton edge="start"     onClick={toggleDrawer(true)}  color="menu" aria-label="menu" sx={{ mr: 2 }}>
               <MenuIcon />
               </IconButton>
