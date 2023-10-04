@@ -1,21 +1,24 @@
 
 import HomeBtn from './home-btn';
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
+import PropTypes from "prop-types";
+import DirectionsIcon from '@mui/icons-material/Directions';
+export default function CardService(props){
+    const icondefault = <DirectionsIcon sx={{fontSize: 70, color: "rgba(140, 48, 245, 1)" }} />
+    const { text = "Menu Item",title="none",icon=icondefault } = props;
 
-export default function CardService(){
-
+   
     return(
         <>
             <div className="card-service">
                 <div className='card-service-icon'>
-                    <SupportAgentIcon sx={{ fontSize: 70 }}/>
+                    {icon}
                 </div>
                 <div className='card-service-title'>
-                    INGENIERIA DE TRAFICO
+                   {title}
                 </div>
                 <div className='card-service-text'>
-                    Lorem ipsum dolor sit amet consectetur ea omnis suscipit? Reiciendis eveniet  enim provident quos fugiat voluptatum! Consectetur.
+                   {text}
                 </div>
                 <div className='card-service-btn'>MAS INFO</div>
             </div>
@@ -23,3 +26,11 @@ export default function CardService(){
     );
 
 }
+
+CardService.propTypes = {
+    title: PropTypes.string,
+    text: PropTypes.string,
+    path: PropTypes.string,
+    icon:PropTypes.any,
+};
+  

@@ -10,6 +10,8 @@ import FormatPaintIcon from '@mui/icons-material/FormatPaint';
 import CardHome from "../components/card-home";
 import CardService from "../components/card-service";
 
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+
 export default function HomeViewV2() {
 
 
@@ -77,9 +79,8 @@ export default function HomeViewV2() {
                     <div style={{ height: 80 }}></div>
                     <HomeBtn />
                 </div>
-
-
             </div>
+
             <div className="content-cards">
                 <div className="text-content">
                     <h2 >PRINCIPALES SERVICIOS</h2>
@@ -87,13 +88,13 @@ export default function HomeViewV2() {
                 <div className="card-home-container">
                     <Grid container spacing={5} >
                         <Grid item xs={12} md={4}>
-                            <CardService/>
+                            <CardService  icon={<SupportAgentIcon sx={{fontSize:70}} /> }   title={"INGENIERIA DE TRAFICO"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
                         </Grid >
                         <Grid item xs={12} md={4}>
-                            <CardService/>
+                        <CardService  icon={<SupportAgentIcon sx={{fontSize:70}} /> }   title={"INGENIERIA DE TRAFICO"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <CardService/>
+                        <CardService  icon={<SupportAgentIcon sx={{fontSize:70}} /> }   title={"INGENIERIA DE TRAFICO"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
                         </Grid>
                     </Grid>
                 </div>

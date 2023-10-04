@@ -11,52 +11,53 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 
 
 export default function NavItem(props) {
-    const { text = "Menu Item", estatus = false, child = false, childrens = [],auxClick,icon} = props;
+    const { text = "Menu Item", estatus = false, child = false, childrens = [], auxClick, icon } = props;
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {
-      setOpen(!open);
+        setOpen(!open);
     };
-    if(child){
-        return(
+    if (child) {
+        return (
             <>
-            <ListItemButton onClick={handleClick}>
-                    <ListItemIcon sx={{color: estatus?"#2ECC71":""}}>
-                   {icon}
+
+                <ListItemButton onClick={handleClick}>
+                    <ListItemIcon sx={{ color: estatus ? "#2ECC71" : "" }}>
+                        {icon}
                     </ListItemIcon>
-                    <ListItemText sx={{color: estatus?"#2ECC71":""}}  primary={text} />
+                    <ListItemText sx={{ color: estatus ? "#2ECC71" : "" }} primary={text} />
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Collapse in={open} timeout="auto" unmountOnExit>
-                    <List  sx={{listStyleType:"circle"}} component="div" disablePadding>
-                    {childrens.map((item)=>{
-                        return(
-                            <>
-                              <ListItemButton sx={{ pl: 4 }} onClick={auxClick}>
-                                <ListItemText primary={item.name} />
-                            </ListItemButton>
-                            </>
-                        );
-                    })}
-                  
+                    <List sx={{ listStyleType: "circle" }} component="div" disablePadding>
+                        {childrens.map((item) => {
+                            return (
+                                <>
+                                    <ListItemButton sx={{ pl: 4 }} onClick={auxClick}>
+                                        <ListItemText primary={item.name} />
+                                    </ListItemButton>
+                                </>
+                            );
+                        })}
+
                     </List>
                 </Collapse>
             </>
         )
 
-    }else{
+    } else {
 
         return (
             <>
                 <ListItem disablePadding>
                     <ListItemButton onClick={auxClick}>
-                        <ListItemIcon sx={{color: estatus?"#2ECC71":""}}>
-                          {icon}
+                        <ListItemIcon sx={{ color: estatus ? "#2ECC71" : "" }}>
+                            {icon}
                         </ListItemIcon>
-                        <ListItemText   sx={{color: estatus?"#2ECC71":""}} primary={text} />
+                        <ListItemText sx={{ color: estatus ? "#2ECC71" : "" }} primary={text} />
                     </ListItemButton>
                 </ListItem>
-    
+
             </>
         )
     }
@@ -64,11 +65,11 @@ export default function NavItem(props) {
 }
 
 NavItem.propTypes = {
-	text: PropTypes.string,
-	estatus: PropTypes.bool,
-	child: PropTypes.bool,
-	childrens: PropTypes.array,
+    text: PropTypes.string,
+    estatus: PropTypes.bool,
+    child: PropTypes.bool,
+    childrens: PropTypes.array,
     auxClick: PropTypes.func,
-    icon:PropTypes.any,
+    icon: PropTypes.any,
 };
 

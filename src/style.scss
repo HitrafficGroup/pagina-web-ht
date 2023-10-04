@@ -328,7 +328,8 @@
 
 
 .card-home-container {
-    width: 100vh;
+    margin-top: 20px;
+    min-height: 500px;
 }
 
 .card-service {
@@ -339,41 +340,55 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .card-service-icon {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .card-service-title {
+        margin-top: 1.8rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .card-service-text {
+        margin-top: 2.8rem;
+        text-align: center;
+        font-size: 15px;
+        line-height: 25px;
+    }
+    
+    .card-service-btn {
+        margin-top: 1.8rem;
+        height: 40px;
+        width: 140px;
+        border: 1px solid black;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
-
-.card-service-icon {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.card-service-title {
-    margin-top: 1.8rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 25px;
-}
-
-.card-service-text {
-    margin-top: 2.8rem;
-    text-align: center;
-    font-size: 15px;
-    line-height: 25px;
-}
-
-.card-service-btn {
-    margin-top: 1.8rem;
-    height: 40px;
-    width: 140px;
-    border: 1px solid black;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card-service:hover {
+    background-color: #000;
+    .card-service-icon{
+        color: white;
+    }
+    .card-service-title {
+     color: white;
+    }
+    .card-service-text {
+        color: white;
+    }
+    .card-service-btn {
+        color: white;
+        border: 1px solid white;
+ 
+    }
 }
 
 //
