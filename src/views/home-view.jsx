@@ -13,63 +13,53 @@ export default function HomeView() {
     return (
 
         <>
-        
-
-       
-
             <div className="section-content">
                 <h1 style={{ color: "white"}} >Hitraffic Technology te ayuda en :</h1>
                 <div className="section-padding">
                     <Grid container spacing={5} >
-                    <Grid item xs={12} md={4}>
-                        <CardHome 
-                                text={"Señaletica Vial"} 
-                                description={"  Diseño y construcción de señales vehiculares simples o con sistemas de iluminación nocturno."}
-                                />
-
-                        </Grid >
-                        <Grid item xs={12} md={4}>
-                           <CardHome 
-                                text={"Semaforización"} 
-                                description={"Instalación y venta de productos de semaforización de como semáforos, controladores, pulsantes etc."}
-                                icon={  <TrafficIcon sx={{ color: "#2ECC71" }} />}
-                                />
-                        </Grid>
-                        
-                        <Grid item xs={12} md={4}>
-                        <CardHome 
-                                text={"Postes vehiculares"} 
-                                description={"Construcción de báculos y postes para sistemas de seguridad ECU 911 o sistemas de semaforización"}
-                                icon={  <HandymanIcon sx={{ color: "#F39C12" }} />}
-                                />
+                            <Grid item xs={12} md={4}>
+                            <CardHome 
+                                    text={"Señaletica Vial"} 
+                                    description={"  Diseño y construcción de señales vehiculares simples o con sistemas de iluminación nocturno."}
+                                    />
+                            </Grid >
+                            <Grid item xs={12} md={4}>
+                            <CardHome 
+                                    text={"Semaforización"} 
+                                    description={"Instalación y venta de productos de semaforización de como semáforos, controladores, pulsantes etc."}
+                                    icon={  <TrafficIcon sx={{ color: "#2ECC71" }} />}
+                                    />
+                            </Grid>
                             
-                        </Grid>
+                            <Grid item xs={12} md={4}>
+                            <CardHome 
+                                    text={"Postes vehiculares"} 
+                                    description={"Construcción de báculos y postes para sistemas de seguridad ECU 911 o sistemas de semaforización"}
+                                    icon={  <HandymanIcon sx={{ color: "#F39C12" }} />}
+                                    />
+                            </Grid>
 
-                        <Grid item xs={12} md={4}>
-                        <CardHome 
-                                text={"Plataforma"} 
-                                description={" Ofertamos el servicio de plataforma para obras que requieran de acceso a grandes alturas."}
-                                icon={  <RvHookupIcon sx={{ color: "#3498DB" }} />}
-                                />
-                            
-                        </Grid >
-                        <Grid item xs={12} md={4}>
-                        <CardHome 
-                                text={"Automatizacion"} 
-                                description={" Brindamos soluciones en la implementacion de sistema de control en diferentes campos."}
-                                icon={  <PrecisionManufacturingIcon sx={{ color: "#E74C3C" }} />}
-                                />
-                           
-                        </Grid >
-                        <Grid item xs={12} md={4}>
-                        <CardHome 
-                                text={"Pintura al Horno"} 
-                                description={"Disponemos de Hornos especializados para la elboaracion de pintura al horno en gabinetes."}
-                                icon={   <FormatPaintIcon sx={{ color: "rgba(140, 48, 245, 1)" }} />}
-                                />
-                    
-                        </Grid >
-
+                            <Grid item xs={12} md={4}>
+                            <CardHome 
+                                    text={"Plataforma"} 
+                                    description={" Ofertamos el servicio de plataforma para obras que requieran de acceso a grandes alturas."}
+                                    icon={  <RvHookupIcon sx={{ color: "#3498DB" }} />}
+                                    />
+                            </Grid >
+                            <Grid item xs={12} md={4}>
+                            <CardHome 
+                                    text={"Automatizacion"} 
+                                    description={" Brindamos soluciones en la implementacion de sistema de control en diferentes campos."}
+                                    icon={  <PrecisionManufacturingIcon sx={{ color: "#E74C3C" }} />}
+                                    />            
+                            </Grid >
+                            <Grid item xs={12} md={4}>
+                            <CardHome 
+                                    text={"Pintura al Horno"} 
+                                    description={"Disponemos de Hornos especializados para la elboaracion de pintura al horno en gabinetes."}
+                                    icon={   <FormatPaintIcon sx={{ color: "rgba(140, 48, 245, 1)" }} />}
+                                    />
+                            </Grid >
                     </Grid>
                 </div>
             </div>
