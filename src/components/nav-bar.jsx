@@ -16,10 +16,12 @@ import ShoppingBasketSharpIcon from '@mui/icons-material/ShoppingBasketSharp';
 import DesignServicesSharpIcon from '@mui/icons-material/DesignServicesSharp';
 import ThumbUpAltSharpIcon from '@mui/icons-material/ThumbUpAltSharp';
 import InfoSharpIcon from '@mui/icons-material/InfoSharp';
+import useScrollDirection from '../hooks/scroll-directions';
 export default function NavBar() {
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
   const location = useLocation();
   const [open,setOpen] = useState(false);
+  const scrollDirection = useScrollDirection();
   const toggleDrawer = (open) => (event) => {
    
     setOpen(open)
@@ -54,7 +56,7 @@ export default function NavBar() {
   if (lgUp) {
     return (
       <>
-        <div className="header" style={{background:"rgb(0, 0, 0,0.2)"}} >
+        <div  className={`header ${ scrollDirection === "down" ? "change-bg" : "transparent"}`} >
           <div className="header-content">
             <img src={Logo} height={70} alt="" />
             <div className="middle-nav-items">
@@ -73,7 +75,7 @@ export default function NavBar() {
 
             </div>
             <div style={{ width: 90 }}>
-
+           
             </div>
           </div>
 

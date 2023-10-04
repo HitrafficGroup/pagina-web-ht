@@ -1,4 +1,4 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,300&display=swap');
 .background-container{
   background-color: #192334;
   background-image: url("./assets/semaforos5.jpg");
@@ -7,13 +7,68 @@
 
 }
 
+// estylos nuevo prototipo web
+.text-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  p{
+    font-size: 15px;
+    line-height: 25px;
+    color: #000;
+    margin-top: 20px;
+    padding: 0;
+    text-align: center;
+    
+  }
+  h3 {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 800;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+}
+
+.content{
+  background-color: white;
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-2{
+  font-family: 'Open Sans', sans-serif;
+  color: #0b0d17;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+
+//
 
 .header {
   height: 72px;
   width: 100%;
   padding-block: 1rem;
   position: fixed;
-  z-index: 999999 !important;
+  z-index: 9999 !important;
   top: 0;
 }
 .header-content{
@@ -51,10 +106,9 @@
 
 
 
-
 .section-content {
   
-
+  font-family: 'Open Sans', sans-serif;
   padding: 3rem;
   display: flex;
   justify-content: center;
@@ -94,19 +148,8 @@ border: 1px solid rgba(245, 86, 54, 0.3);
 
 }
 
-.content {
-  align-items: flex-start;
-  display: inline-flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  padding: 40px 48px;
-  color: white;
-  width: 440px;
-  padding: 12px;
-  p{
-    font-style: italic;
-  }
-}
+
+
 
 
 
@@ -390,11 +433,33 @@ justify-content: end;
 }
 
 .wsp-btn{
-
+  z-index: 99999;
   position: fixed;
   width: 64px;
   bottom: 60px;
   right: 15px;
+}
+.change-bg{
+  animation-name: mymove;
+  animation-duration: 2s; /* Cambia la duración según tus necesidades */
+  animation-fill-mode: forwards; 
+}
+.transparent{
+  background: transparent;
+  animation-name: mymove2;
+  animation-duration: 2s; /* Cambia la duración según tus necesidades */
+  animation-fill-mode: forwards; 
+}
+
+
+@keyframes mymove {
+  from {background-color: transparent;}
+  to {background-color: black;}
+}
+
+@keyframes mymove2 {
+  from {background-color: black;}
+  to {background-color: transparent;}
 }
 
 

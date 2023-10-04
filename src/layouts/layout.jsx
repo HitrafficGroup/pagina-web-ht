@@ -42,7 +42,7 @@ export const Layout=(props)=>{
   return (
     <>
       <NavBar  />  
-      <LayoutRoot onScroll={()=>{console.log("hola");}}>
+      <LayoutRoot>
         <LayoutContainer >
           {children}
         </LayoutContainer>
