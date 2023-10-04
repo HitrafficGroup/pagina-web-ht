@@ -25,7 +25,6 @@ export default function HomeView() {
                         <CardHome 
                                 text={"Señaletica Vial"} 
                                 description={"  Diseño y construcción de señales vehiculares simples o con sistemas de iluminación nocturno."}
-                               
                                 />
 
                         </Grid >
