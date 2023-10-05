@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState ,useRef} from 'react';
 import { styled } from '@mui/material/styles';
 import { useLocation } from 'react-router-dom';
-
 import NavBar from '../components/nav-bar';
 import Footer from '../components/footer';
 
+import 'simplebar-react/dist/simplebar.min.css';
 const LayoutRoot = styled('div')(({ theme }) => ({
   display: 'flex',
   flex: '1 1 auto',
@@ -18,7 +18,11 @@ const LayoutContainer = styled('div')({
   width: '100%'
 });
 
+
+
+
 export const Layout=(props)=>{
+
   const { children } = props;
   const [openNav, setOpenNav] = useState(true);
   const pathname = useLocation();
@@ -34,20 +38,26 @@ export const Layout=(props)=>{
   useEffect(
     () => {
       handlePathnameChange();
+
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [pathname]
   );
 
+
   return (
     <>
-      <NavBar  />  
-      <LayoutRoot>
-        <LayoutContainer >
-          {children}
-        </LayoutContainer>
-      </LayoutRoot>
-      <Footer/>
+
+     
+      
+       <NavBar  /> 
+        <LayoutRoot>
+          <LayoutContainer >
+            {children}
+          </LayoutContainer>
+        </LayoutRoot>
+        <Footer/>
+
     
     </>
   );
