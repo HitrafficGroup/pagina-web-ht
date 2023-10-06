@@ -42,7 +42,7 @@ export default function HeaderMenuDefault(props) {
 				{text}
 				
 				</div>
-				<KeyboardArrowDownIcon/>
+	
 			</div>
 			
 			<Menu
