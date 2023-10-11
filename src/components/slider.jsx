@@ -1,4 +1,5 @@
 import AwesomeSlider from 'react-awesome-slider';
+
 import 'react-awesome-slider/dist/styles.css';
 import React from 'react';
 import imagen1 from '../assets/fondo1.jpg';
@@ -8,7 +9,11 @@ export default function Slider(){
 
     return(
         <>
-           <AwesomeSlider>
+           <AwesomeSlider
+           play={true}
+           cancelOnInteraction={false}
+           interval={3000}
+           >
             <div>
             <img src={imagen1} className='slide' />
             </div>

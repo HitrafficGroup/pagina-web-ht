@@ -15,7 +15,6 @@ import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
@@ -57,31 +56,18 @@ function CustomTabPanel(props) {
     };
   }
   
-  function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-  }
 
 
 export default function Radiot320View(){
 
-    function handleClick(event) {
-        event.preventDefault();
-        console.info('You clicked a breadcrumb.');
-      }
-      const [value, setValue] = React.useState(0);
+  
+      const [value, setValue] = useState(0);
 
       const handleChange = (event, newValue) => {
         setValue(newValue);
       };
      
-      const rows = [
-        createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-        createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-        createData('Eclair', 262, 16.0, 24, 6.0),
-        createData('Cupcake', 305, 3.7, 67, 4.3),
-        createData('Gingerbread', 356, 16.0, 49, 3.9),
-      ];
-      
+
 
     return(
 
@@ -89,7 +75,7 @@ export default function Radiot320View(){
         <div className="products-bg">
             <div className="top-content">
                 <h1>POC Radio - T320</h1>
-                <div role="presentation" onClick={handleClick}>
+          
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
                     Home
@@ -97,13 +83,12 @@ export default function Radiot320View(){
                     <Link
                     underline="hover"
                     color="inherit"
-                    href="/material-ui/getting-started/installation/"
+                    href="/productos/radios"
                     >
                     Radios
                     </Link>
                     <Typography color="text.primary">T320</Typography>
                 </Breadcrumbs>
-                </div>
               
             </div>
 

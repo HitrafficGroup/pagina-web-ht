@@ -6,7 +6,6 @@ import Grid from '@mui/material/Grid';
 import lat from "../assets/TM7-LATERAL.jpg";
 import front from "../assets/TM7-SUPINF.jpg";
 import pos from "../assets/TM7-POSTERIOR.jpg";
-import { useNavigate } from 'react-router-dom';
 import React,{useState} from 'react';
 
 import AwesomeSlider from 'react-awesome-slider';
@@ -63,40 +62,31 @@ function a11yProps(index) {
 
 export default function Tm7View() {
     const [value, setValue] = useState(0);
-    const navigate = useNavigate();
-    function handleClick(event) {
-        event.preventDefault();
-        console.info('You clicked a breadcrumb.');
-    }
-
+   
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-
-
-
     return (
 
         <>
             <div className="products-bg">
                 <div className="top-content">
                     <h1>BodyCam</h1>
-                    <div role="presentation" onClick={handleClick}>
+
                         <Breadcrumbs aria-label="breadcrumb">
-                            <Link underline="hover" color="inherit" href="#">
+                            <Link underline="hover" color="inherit" href="/">
                                 Home
                             </Link>
                             <Link
                                 underline="hover"
                                 color="inherit"
-                                onClick={()=>{navigate("/productos/radios")}}
                                 href="/productos/radios"
                             >
                                 Radios
                             </Link>
                             <Typography color="text.primary">tm-7</Typography>
                         </Breadcrumbs>
-                    </div>
+             
 
                 </div>
 

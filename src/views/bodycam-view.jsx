@@ -65,10 +65,6 @@ function CustomTabPanel(props) {
 
 export default function BodyCamView(){
 
-    function handleClick(event) {
-        event.preventDefault();
-        console.info('You clicked a breadcrumb.');
-      }
       const [value, setValue] = useState(0);
 
       const handleChange = (event, newValue) => {
@@ -83,7 +79,7 @@ export default function BodyCamView(){
         <div className="products-bg">
             <div className="top-content">
                 <h1>BodyCam</h1>
-                <div role="presentation" onClick={handleClick}>
+              
                 <Breadcrumbs aria-label="breadcrumb">
                     <Link underline="hover" color="inherit" href="/">
                     Home
@@ -91,13 +87,13 @@ export default function BodyCamView(){
                     <Link
                     underline="hover"
                     color="inherit"
-                    href="/material-ui/getting-started/installation/"
+                    href="/productos/radios"
                     >
                     Radios
                     </Link>
                     <Typography color="text.primary">bodycam</Typography>
                 </Breadcrumbs>
-                </div>
+            
               
             </div>
 
