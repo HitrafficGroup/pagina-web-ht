@@ -7,6 +7,8 @@ import { Layout } from './layouts/layout';
 import ServiciosView from './views/servicios-view';
 import AboutView from './views/about-view';
 import HomeViewV2 from './views/home-view-v2';
+import RadiosView from './views/radios-view';
+import SemaforosView from './views/semaforos-view';
 function App() {
   return (
     <>
@@ -19,6 +21,8 @@ function App() {
                 <Route path='/productos' element={<ProductsView />} />
                 <Route path='/servicios' element={<ServiciosView />} />
                 <Route path='/acerca_nosotros' element={<AboutView />} />
+                <Route path='/productos/radios' element={<RadiosView />} />
+                <Route path='/productos/semaforos' element={<SemaforosView />} />
                 <Route path='*' element={<NotFound />} />
               </Routes>
         </Layout>

@@ -52,7 +52,10 @@ export default function Footer() {
                     </Grid>
                 </Grid>
             </div>
-            <img src={wsp}  className="wsp-btn" alt="" />
+            <a href="https://api.whatsapp.com/message/DTWND5XJ6TK4B1?autoload=1&app_absent=0"  target="_blank" >
+                   <img src={wsp}  className="wsp-btn" alt=""  />
+            </a>
+         
 
         </>)
 }

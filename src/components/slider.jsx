@@ -1,7 +1,7 @@
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import React from 'react';
-import imagen1 from '../assets/road1.jpg';
+import imagen1 from '../assets/fondo1.jpg';
 import imagen2 from '../assets/road2.jpg';
 
 export default function Slider(){

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import HeaderMenuDefault from './HeaderMenuDefault';
 import { useLocation } from 'react-router-dom';
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.png';
+import LogoFinal from '../assets/logopw.png'; 
 import { useMediaQuery } from "@mui/material";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -58,7 +59,7 @@ export default function NavBar() {
 			<>
 				<div className={`header ${scrollDirection === 0 ? "transparent" : "change-bg"}`} >
 					<div className="header-content">
-						<img src={Logo} height={70} alt="" />
+						<img src={LogoFinal} height={70} alt="" />
 						<div className="middle-nav-items">
 							{menu_data.map((item) => {
 								const active = item.path ? (location.pathname === item.path) : false;

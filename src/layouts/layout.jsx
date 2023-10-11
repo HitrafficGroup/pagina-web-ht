@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import { useLocation } from 'react-router-dom';
 import NavBar from '../components/nav-bar';
 import Footer from '../components/footer';
-
+import AppBarV2 from '../components/app-bar-v2';
 import 'simplebar-react/dist/simplebar.min.css';
 const LayoutRoot = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -51,6 +51,7 @@ export const Layout=(props)=>{
      
       
        <NavBar  /> 
+       {/* <AppBarV2/> */}
         <LayoutRoot>
           <LayoutContainer >
             {children}
