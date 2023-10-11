@@ -1,30 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { useNavigate } from 'react-router-dom';
 
-
+import Button from '@mui/material/Button';
 import ImageScarecrow from '../assets/Scarecrow.png'
 
 
-const Wrapper = styled.button`
-  font-family: 'Space Mono';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 21px;
-  letter-spacing: -0.035em;
-  color: white;
-  background: #333;
-  padding: 24px 43px;
-  cursor: pointer;
-`
 
-const Button = ({children}) => {
-  return ( 
-    <Wrapper>
-      {children}
-    </Wrapper>
-  );
-}
  
 
 const Main = styled.main`
@@ -90,19 +72,22 @@ const Image = styled.img`
 
 
 
-const NotFound = () => {
+export default function NotFound(){
+  const navigate = useNavigate();
+
   return (
-    <Main>
+    <>
+    <Main style={{marginTop:"14rem"}}>
       <div>
         <Image src={ImageScarecrow} alt=""/>
       </div>
       <Info>
         <h2 style={{color:'white'}} >Te Tengo Malas Noticias</h2>
         <p style={{color:'white'}}>La página que estás tratando de buscar, posiblemente no exista o este en mantenimiento.</p>
-        <Button>Regresar al Inicio</Button>
+        <Button onClick={()=>{navigate("/")}} variant="contained">Regresar al Inicio</Button>
       </Info>
     </Main>
+    </>
   );
 }
  
-export default NotFound;
