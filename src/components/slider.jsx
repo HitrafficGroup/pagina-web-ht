@@ -13,12 +13,13 @@ export default function Slider(){
            play={true}
            cancelOnInteraction={false}
            interval={3000}
+           
            >
             <div>
-            <img src={imagen1} className='slide' />
+            <img src={imagen1} className='slide-home' />
             </div>
             <div>
-            <img src={imagen2} className='slide' />
+            <img src={imagen2} className='slide-home' />
             </div>
          
             </AwesomeSlider>

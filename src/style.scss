@@ -434,7 +434,7 @@
 }
 .aws-btn {
 
-    --slider-height-percentage: 80%;
+    --slider-height-percentage: 100%;
     --slider-transition-duration: 700ms;
     --organic-arrow-thickness: 4px;
     --organic-arrow-border-radius: 0px;
@@ -806,9 +806,16 @@
     margin: 0;
 }
 
+.slide-home{
+    width: 100%;
+    height: 100%;    
+}
 .slide {
     width: 100%;
-    height: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color: #fff;
+    
 }
 
 .slide2 {

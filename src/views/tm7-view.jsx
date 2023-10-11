@@ -92,10 +92,10 @@ export default function Tm7View() {
 
                 <Grid sx={{ padding: "3rem" }} container spacing={5} >
                     <Grid item xs={12} md={5}>
-                        <div className="images-productos">
-                            <AwesomeSlider>
+                        <div className="images-productos ">
+                            <AwesomeSlider bullets={true}    >
                                 <div>
-                                    <img src={front} className='slide' />
+                                    <img src={front}  className='slide' />
                                 </div>
                                 <div>
                                     <img src={lat} className='slide' />
