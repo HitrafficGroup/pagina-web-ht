@@ -9,6 +9,10 @@ import AboutView from './views/about-view';
 import HomeViewV2 from './views/home-view-v2';
 import RadiosView from './views/radios-view';
 import SemaforosView from './views/semaforos-view';
+import Radiot320View from './views/radiot320-view';
+import Radio300View from './views/radios300-view';
+import BodyCamView from './views/bodycam-view';
+import Tm7View from './views/tm7-view';
 function App() {
   return (
     <>
@@ -22,6 +26,10 @@ function App() {
                 <Route path='/servicios' element={<ServiciosView />} />
                 <Route path='/acerca_nosotros' element={<AboutView />} />
                 <Route path='/productos/radios' element={<RadiosView />} />
+                <Route path='/productos/radios/t-320' element={<Radiot320View />} />
+                <Route path='/productos/radios/s-300' element={<Radio300View />} />
+                <Route path='/productos/radios/tm7' element={<Tm7View />} />
+                <Route path='/productos/radios/bodycam' element={<BodyCamView />} />
                 <Route path='/productos/semaforos' element={<SemaforosView />} />
                 <Route path='*' element={<NotFound />} />
               </Routes>

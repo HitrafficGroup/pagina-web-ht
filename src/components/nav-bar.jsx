@@ -18,6 +18,7 @@ import DesignServicesSharpIcon from '@mui/icons-material/DesignServicesSharp';
 import ThumbUpAltSharpIcon from '@mui/icons-material/ThumbUpAltSharp';
 import InfoSharpIcon from '@mui/icons-material/InfoSharp';
 import useScrollDirection from '../hooks/scroll-directions';
+
 export default function NavBar() {
 	const lgUp = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 	const location = useLocation();
@@ -94,7 +95,7 @@ export default function NavBar() {
 							<IconButton edge="start" onClick={toggleDrawer(true)} color="menu" aria-label="menu" sx={{ mr: 2 }}>
 								<MenuIcon />
 							</IconButton>
-							<img src={Logo} height={40} alt="" />
+							<img src={LogoFinal} height={40} alt="" />
 						</Toolbar>
 					</AppBar>
 				</Box>
