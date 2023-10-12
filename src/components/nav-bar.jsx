@@ -136,17 +136,14 @@ const menu_data = [
 				path: "/productos/radios",
 			},
 			{
-				name: "Semaforos",
+				name: "Semaforizacion",
 				path: "/productos/semaforos",
 			},
 			{
-				name: "Controladores",
+				name: "Metal Mecanicos",
 				path: "/productos/controladores",
 			},
-			{
-				name: "Postes",
-				path: "/productos/postes",
-			},
+			
 		]
 	},
 	{

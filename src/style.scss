@@ -801,6 +801,13 @@
     border-radius: 4px;
 
 }
+.awssld__content {
+    background-color: #fff !important;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .btn-text {
     margin: 0;
