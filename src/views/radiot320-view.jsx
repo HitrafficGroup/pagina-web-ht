@@ -215,7 +215,7 @@ export default function Radiot320View(){
                                     Tiempo de trabajo aproximado 9 horas.
                                 </li>
                                 <li>
-                                    Altavoz Ø36mm, 8Ω 2W
+                                    Altavoz Ø36mm, 8Ω 2W.
                                 </li>
                                 <li>
                                     Plataforma para registro de posicionamiento GPS.
