@@ -170,10 +170,10 @@ export default function Radiot320View(){
                                 <li>
                                     <WifiIcon/> Conexión WIFI (Adaptable:NFC)
                                 </li>
-                                <Button variant="contained" onClick={handleClickOpen} >
+                            </ul>
+                            <Button variant="outlined" onClick={handleClickOpen} >
                                     Cotizar
                                 </Button>
-                            </ul>
                         </div>
                     </Grid >
                     <Grid item xs={12} md={12}>

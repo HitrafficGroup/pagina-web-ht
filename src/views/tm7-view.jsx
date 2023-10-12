@@ -168,10 +168,10 @@ export default function Tm7View() {
                                 <li>
                                     <WifiIcon /> Conexión WIFI (Adaptable:NFC)
                                 </li>
-                                <Button variant="contained" onClick={handleClickOpen} >
+                            </ul>
+                            <Button variant="contained" onClick={handleClickOpen} >
                                 Cotizar
                             </Button>
-                            </ul>
                         </div>
                     </Grid >
                     <Grid item xs={12} md={12}>
@@ -204,37 +204,36 @@ export default function Tm7View() {
                                                     <TableCell align="left"><strong> NFC</strong></TableCell>
                                                     <TableCell align="center">SOPORTE</TableCell>
                                                     <TableCell align="left"><strong>PANTALLA</strong></TableCell>
-                                                    <TableCell align="center">5 inches, G + FF multi-touch (Corning Gorilla 3)</TableCell>
+                                                    <TableCell align="center">4.0" OLED screen, 60*640RGB. MIPI1lin</TableCell>
                                                 </TableRow>
                                                 <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                                     <TableCell align="left"><strong> LOCALIZACIÓN</strong></TableCell>
                                                     <TableCell align="center">GPS, GLONASS, AGPS，Beidou</TableCell>
                                                     <TableCell align="left"><strong>AUDIO</strong></TableCell>
-                                                    <TableCell align="center">Ø25*35mm，8Ω 3W</TableCell>
+                                                    <TableCell align="center">3558 Altavoz tipo pasarela, potencia: 5W</TableCell>
                                                 </TableRow>
                                                 <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                                     <TableCell align="left"><strong> CPU</strong></TableCell>
                                                     <TableCell align="center">MT6739, 1.5GHz, 4 cores</TableCell>
                                                     <TableCell align="left"><strong>OS</strong></TableCell>
-                                                    <TableCell align="center">Android 11</TableCell>
+                                                    <TableCell align="center">Android 7.1</TableCell>
                                                 </TableRow>
                                                 <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                                     <TableCell align="left"><strong>MEMORY</strong></TableCell>
                                                     <TableCell align="center">2GB（RAM）+ 16GB（ROM）</TableCell>
                                                     <TableCell align="left"><strong>DIMENSION</strong></TableCell>
-                                                    <TableCell align="center">188×58×87mm</TableCell>
+                                                    <TableCell align="center">195.1×67.3×88.6mm</TableCell>
                                                 </TableRow>
                                                 <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                                                    <TableCell align="left"><strong>BATERIA</strong></TableCell>
-                                                    <TableCell align="center">4600mAh</TableCell>
+                                                    <TableCell align="left"><strong>TF-CARD</strong></TableCell>
+                                                    <TableCell align="center">Support，Micro SD/TF×1，up to 32GB</TableCell>
                                                     <TableCell align="left"><strong>WEIGHT</strong></TableCell>
                                                     <TableCell align="center">≈500g</TableCell>
                                                 </TableRow>
                                                 <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                                                    <TableCell align="left"><strong>MICRÓFONO</strong></TableCell>
-                                                    <TableCell align="center">Anti-interference MIC</TableCell>
-                                                    <TableCell align="left"><strong>IP RATE</strong></TableCell>
-                                                    <TableCell align="center">IP67</TableCell>
+                                                    <TableCell align="left"><strong>Interface</strong></TableCell>
+                                                    <TableCell colSpan={3} align="center">Interfaz de micrófono para auriculares de aviación (sin teclado digital) /DB25/GPS interfaz de antena externa/interfaz externa de antena principal</TableCell>
+
                                                 </TableRow>
                                             </TableBody>
                                         </Table>

@@ -14,6 +14,7 @@ import Radio300View from './views/radios300-view';
 import BodyCamView from './views/bodycam-view';
 import Tm7View from './views/tm7-view';
 import SemaforizacionView from './views/semaforizacion-view';
+import ProductosMecanicos from './views/productos-mecanicos';
 function App() {
   return (
     <>
@@ -32,6 +33,7 @@ function App() {
                 <Route path='/productos/radios/tm7' element={<Tm7View />} />
                 <Route path='/productos/radios/bodycam' element={<BodyCamView />} />
                 <Route path='/productos/semaforos' element={<SemaforosView />} />
+                <Route path='/productos/metalica' element={<ProductosMecanicos />} />
                 <Route path='/servicios/semaforizacion' element={<SemaforizacionView />} />
                 <Route path='*' element={<NotFound />} />
                 

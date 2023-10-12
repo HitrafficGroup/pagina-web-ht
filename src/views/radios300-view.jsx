@@ -172,9 +172,9 @@ export default function Radio300View() {
                                 </li>
 
                             </ul>
-                            <Button variant="contained" onClick={handleClickOpen} >
-                                Cotizar
-                            </Button>
+                            <Button variant="outlined" onClick={handleClickOpen} >
+                                    Cotizar
+                                </Button>
                         </div>
                     </Grid >
                     <Grid item xs={12} md={12}>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import HeaderMenuDefault from './HeaderMenuDefault';
 import { useLocation } from 'react-router-dom';
 import Logo from '../assets/logo.png';
+
 import LogoFinal from '../assets/logopw.png'; 
 import { useMediaQuery } from "@mui/material";
 import AppBar from '@mui/material/AppBar';
@@ -141,7 +142,7 @@ const menu_data = [
 			},
 			{
 				name: "Metal Mecanicos",
-				path: "/productos/controladores",
+				path: "/productos/metalica",
 			},
 			
 		]
