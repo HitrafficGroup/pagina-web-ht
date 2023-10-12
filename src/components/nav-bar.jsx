@@ -157,21 +157,9 @@ const menu_data = [
 				path: "/servicios/semaforizacion",
 			},
 			{
-				name: "Pintura Industrial",
-				path: "/servicios/pintura_industrial",
-			},
-			{
 				name: "Alquiler de Plataforma",
 				path: "/servicios/plataforma",
 			},
-			{
-				name: "Automatización",
-				path: "/servicios/automatizacion",
-			},
-			{
-				name: "Importaciones",
-				path: "/servicios/importaciones",
-			}
 		]
 	},
 	{

@@ -15,7 +15,7 @@ import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
-
+import Button from '@mui/material/Button';
 import TableRow from '@mui/material/TableRow';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
@@ -24,6 +24,17 @@ import SimCardIcon from '@mui/icons-material/SimCard';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import WifiIcon from '@mui/icons-material/Wifi';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
   
@@ -63,6 +74,15 @@ export default function Radio300View(){
 
   
       const [value, setValue] = useState(0);
+      const [open, setOpen] = useState(false);
+
+      const handleClickOpen = () => {
+        setOpen(true);
+      };
+    
+      const handleClose = () => {
+        setOpen(false);
+      };
 
       const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -132,6 +152,9 @@ export default function Radio300View(){
                                 </li>
                                 
                             </ul>
+                            <Button variant="contained" onClick={handleClickOpen} >
+                                Cotizar
+                            </Button>
                         </div>
                     </Grid >
                     <Grid item xs={12} md={12}>
@@ -238,7 +261,67 @@ export default function Radio300View(){
                 </Grid >
                 
         </div>
+        <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>Cotizacion</DialogTitle>
+        <DialogContent>
+          <Stack spacing={2}>
+            <p>
+                Llene el formulario de cotizacion y un asesor de ventas se contactara con usted, por correo
+                o directamente por su numero de telefono.
+            </p>
+            <Stack direction={"row"} spacing={2}>
+            <TextField
+                required
+                id="outlined-required"
+                label="Nombre"
+                type="text"
+                fullWidth
+            />
+             <TextField
+               required
+               id="outlined-required"
+               label="Apellido"
+               type="text"
+               fullWidth
+            />
+            </Stack>
+            <TextField
+                required
+                id="outlined-required"
             
+                label="Direccion de Correo"
+                InputProps={{
+                    startAdornment: (
+                    <InputAdornment position="start">
+                        <EmailIcon />
+                    </InputAdornment>
+                    ),
+                }}
+        
+                type="email"
+            />
+              <TextField
+                required
+                id="outlined-required"
+            
+                label="Telefono"
+                InputProps={{
+                    startAdornment: (
+                    <InputAdornment position="start">
+                        <PhoneEnabledIcon />
+                    </InputAdornment>
+                    ),
+                }}
+        
+                type="email"
+            />
+          </Stack>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={handleClose}>Cotizar</Button>
+        </DialogActions>
+      </Dialog>
         
         </>
     );

@@ -23,6 +23,7 @@ import SimCardIcon from '@mui/icons-material/SimCard';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import WifiIcon from '@mui/icons-material/Wifi';
+import Button from '@mui/material/Button';
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
   
@@ -66,7 +67,12 @@ export default function Radiot320View(){
       const handleChange = (event, newValue) => {
         setValue(newValue);
       };
-     
+      const [open, setOpen] = useState(false);
+
+      const handleClickOpen = () => {
+        setOpen(true);
+      };
+    
 
 
     return(
@@ -130,7 +136,9 @@ export default function Radiot320View(){
                                 <li>
                                     <WifiIcon/> Conexión WIFI (Adaptable:NFC)
                                 </li>
-                                
+                                <Button variant="contained" onClick={handleClickOpen} >
+                                    Cotizar
+                                </Button>
                             </ul>
                         </div>
                     </Grid >
@@ -139,9 +147,8 @@ export default function Radiot320View(){
                             <Box sx={{ width: '100%' }}>
                                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                                     <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                                    <Tab label="Caracteristicas" {...a11yProps(0)} />
-                                    <Tab label="Descripcion" {...a11yProps(1)} />
-                                    
+                                        <Tab label="Caracteristicas" {...a11yProps(0)} />
+                                        <Tab label="Descripcion" {...a11yProps(1)} />
                                     </Tabs>
                                 </Box>
                                 <CustomTabPanel value={value} index={0}>
