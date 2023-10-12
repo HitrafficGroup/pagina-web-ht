@@ -24,6 +24,17 @@ import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import WifiIcon from '@mui/icons-material/Wifi';
 import Button from '@mui/material/Button';
+
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import InputAdornment from '@mui/material/InputAdornment';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+import emailjs from '@emailjs/browser';
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
   
@@ -62,15 +73,38 @@ function CustomTabPanel(props) {
 export default function Radiot320View(){
 
   
-      const [value, setValue] = useState(0);
+    const [value, setValue] = useState(0);
+    const [open, setOpen] = useState(false);
+    const [numero,setNumero] = useState("");
+    const [email,setEmail] = useState("");
+    const [nombre,setNombre]  = useState("");
+    const [apellido,setApellido]  = useState("");
+    const [mensaje,setMensaje] = useState("");
+
+    const handleClickOpen = () => {
+        setOpen(true);
+      };
+      const enviarEmailJs=()=>{
+            const templateParams = {
+                from_name:  `${nombre} ${apellido}`,
+                message: mensaje,
+                numero:numero,
+                correo:email,
+            };
+            emailjs.send('service_5ta3uir','template_sg3oltu', templateParams, '__kIJxAY6uzbb1RzE').then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            }, (err) => {
+            console.log('FAILED...', err);
+            });
+            setOpen(false);
+      }
+    
+      const handleClose = () => {
+        setOpen(false);
+      };
 
       const handleChange = (event, newValue) => {
         setValue(newValue);
-      };
-      const [open, setOpen] = useState(false);
-
-      const handleClickOpen = () => {
-        setOpen(true);
       };
     
 
@@ -103,13 +137,13 @@ export default function Radiot320View(){
                         <div className="images-productos">
                             <AwesomeSlider>
                             <div>
-                            <img src={lat} className='slide' />
+                            <img src={lat} className='slide' alt='t320-lat' />
                             </div>
                             <div>
-                            <img src={front} className='slide' />
+                            <img src={front} className='slide' alt='t320-front' />
                             </div>
                             <div>
-                            <img src={sup} className='slide' />
+                            <img src={sup} className='slide' alt='t320-sup' />
                             </div>
                             </AwesomeSlider>
                         </div>
@@ -245,7 +279,86 @@ export default function Radiot320View(){
                 </Grid >
                 
         </div>
-            
+        <Dialog open={open} onClose={handleClose}>
+                <DialogTitle>Cotizacion</DialogTitle>
+                <DialogContent>
+                    <Stack spacing={2}>
+                        <p>
+                            Llene el formulario de cotizacion y un asesor de ventas se contactara con usted, por correo
+                            o directamente por su numero de telefono.
+                        </p>
+                        <Stack direction={"row"} spacing={2}>
+                            <TextField
+                                required
+                                id="outlined-required"
+                                label="Nombre"
+                                type="text"
+                                fullWidth
+                                onChange={(event) => {
+                                    setNombre(event.target.value);
+                                }}
+                            />
+                            <TextField
+                                required
+                                id="outlined-required"
+                                label="Apellido"
+                                type="text"
+                                fullWidth
+                                onChange={(event) => {
+                                    setApellido(event.target.value);
+                                }}
+                            />
+                        </Stack>
+                        <TextField
+                            required
+                            id="outlined-required"
+
+                            label="Direccion de Correo"
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <EmailIcon />
+                                    </InputAdornment>
+                                ),
+                            }}
+                            onChange={(event) => {
+                                setEmail(event.target.value);
+                            }}
+                            type="email"
+                        />
+                        <TextField
+                            required
+                            id="outlined-required"
+
+                            label="Telefono"
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <PhoneEnabledIcon />
+                                    </InputAdornment>
+                                ),
+                            }}
+                            onChange={(event) => {
+                                setNumero(event.target.value);
+                            }}
+                            type="email"
+                        />
+                        <TextField
+                            id="outlined-multiline-flexible"
+                            label="Mensaje"
+                            multiline
+                            maxRows={4}
+                            onChange={(event) => {
+                                setMensaje(event.target.value);
+                            }}
+                        />
+                    </Stack>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose}>Cancel</Button>
+                    <Button onClick={enviarEmailJs}>Cotizar</Button>
+                </DialogActions>
+            </Dialog>
         
         </>
     );
