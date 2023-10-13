@@ -1,10 +1,56 @@
-import React from "react";
+import React,{useState} from "react";
 import plataforma from "../assets/semaforos_portada.jpg";
 import Container from '@mui/material/Container';
 import PlataformaTop from "../assets/plataforma_top.png";
 import plataformaUso from "../assets/uso_plataforma.jpg";
+import { Button } from "@mui/material";
+
+
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import TextField from '@mui/material/TextField';
+import Stack from '@mui/material/Stack';
+import InputAdornment from '@mui/material/InputAdornment';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+import emailjs from '@emailjs/browser';
+import FormularioCotizacion from "../components/formulario-cotizacion";
+
 export default function PlataformaView(){
-    
+    const [value, setValue] = useState(0);
+    const [open, setOpen] = useState(false);
+    const [numero,setNumero] = useState("");
+    const [email,setEmail] = useState("");
+    const [nombre,setNombre]  = useState("");
+    const [apellido,setApellido]  = useState("");
+    const [mensaje,setMensaje] = useState("");
+
+    const handleClickOpen = () => {
+        setOpen(true);
+      };
+
+    const enviarEmailJs=()=>{
+            const templateParams = {
+                from_name:  `${nombre} ${apellido}`,
+                message: mensaje,
+                numero:numero,
+                correo:email,
+                producto:"plataforma",
+                
+            };
+            emailjs.send('service_5ta3uir','template_sg3oltu', templateParams, '__kIJxAY6uzbb1RzE').then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            }, (err) => {
+            console.log('FAILED...', err);
+            });
+            setOpen(false);
+    }
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     return(
         <>
@@ -29,8 +75,8 @@ export default function PlataformaView(){
                               acceso a áreas de difícil acceso.
                         </p>
                     </li>
-                    <li>
-                        <div>
+                    <li style={{listStyleType:"none"}}>
+                        <div className="plataforma-img">
                             <img src={PlataformaTop} alt="especificaciones de la plataforma" width={400} />
                         </div>
                         
@@ -48,15 +94,28 @@ export default function PlataformaView(){
                         </p>
                     </li>
                 </ul>
-                <p>Contar con personal capacitado para operar una plataforma de elevación es fundamental para garantizar la seguridad y eficiencia
-                     en los trabajos en altura. Si Hitraffic SAS proporciona personal capacitado en el uso de la plataforma de elevación,
-                      eso es una ventaja significativa para cualquier empresa o individuo que necesite realizar trabajos que involucren 
-                      el uso de este tipo de equipos. </p>
-                      <img  src={plataformaUso} />
+                <p>
+                    Contar con personal capacitado para operar una plataforma de elevación es fundamental para garantizar la seguridad y eficiencia
+                    en los trabajos en altura. Si Hitraffic SAS proporciona personal capacitado en el uso de la plataforma de elevación,
+                    eso es una ventaja significativa para cualquier empresa o individuo que necesite realizar trabajos que involucren 
+                    el uso de este tipo de equipos. 
+                </p>
+                    <div className="plataforma-img">
+                        <img  src={plataformaUso} />
+                    </div>
+                <div className="btn-cotizar">
+                    <FormularioCotizacion/>
+                </div>
+                   
+                <div style={{height:"4rem"}}>
+
+                </div>
+                
+               
             </Container>
 
             </div>
-
+           
         </>
     );
 

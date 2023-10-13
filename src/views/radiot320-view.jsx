@@ -10,7 +10,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -35,116 +35,118 @@ import InputAdornment from '@mui/material/InputAdornment';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 import emailjs from '@emailjs/browser';
+import FormularioCotizacion from '../components/formulario-cotizacion';
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
-  
+
     return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`simple-tabpanel-${index}`}
-        aria-labelledby={`simple-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box sx={{ p: 3 }}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box sx={{ p: 3 }}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
     );
-  }
-  
-  CustomTabPanel.propTypes = {
+}
+
+CustomTabPanel.propTypes = {
     children: PropTypes.node,
     index: PropTypes.number.isRequired,
     value: PropTypes.number.isRequired,
-  };
-  
-  function a11yProps(index) {
+};
+
+function a11yProps(index) {
     return {
-      id: `simple-tab-${index}`,
-      'aria-controls': `simple-tabpanel-${index}`,
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
     };
-  }
-  
+}
 
 
-export default function Radiot320View(){
 
-  
+export default function Radiot320View() {
+
+
     const [value, setValue] = useState(0);
     const [open, setOpen] = useState(false);
-    const [numero,setNumero] = useState("");
-    const [email,setEmail] = useState("");
-    const [nombre,setNombre]  = useState("");
-    const [apellido,setApellido]  = useState("");
-    const [mensaje,setMensaje] = useState("");
+    const [numero, setNumero] = useState("");
+    const [email, setEmail] = useState("");
+    const [nombre, setNombre] = useState("");
+    const [apellido, setApellido] = useState("");
+    const [mensaje, setMensaje] = useState("");
 
     const handleClickOpen = () => {
         setOpen(true);
-      };
-      const enviarEmailJs=()=>{
-            const templateParams = {
-                from_name:  `${nombre} ${apellido}`,
-                message: mensaje,
-                numero:numero,
-                correo:email,
-            };
-            emailjs.send('service_5ta3uir','template_sg3oltu', templateParams, '__kIJxAY6uzbb1RzE').then((response) => {
+    };
+    const enviarEmailJs = () => {
+        const templateParams = {
+            from_name: `${nombre} ${apellido}`,
+            message: mensaje,
+            numero: numero,
+            correo: email,
+            producto: "Radio320"
+        };
+        emailjs.send('service_5ta3uir', 'template_sg3oltu', templateParams, '__kIJxAY6uzbb1RzE').then((response) => {
             console.log('SUCCESS!', response.status, response.text);
-            }, (err) => {
+        }, (err) => {
             console.log('FAILED...', err);
-            });
-            setOpen(false);
-      }
-    
-      const handleClose = () => {
+        });
         setOpen(false);
-      };
+    }
 
-      const handleChange = (event, newValue) => {
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const handleChange = (event, newValue) => {
         setValue(newValue);
-      };
-    
+    };
 
 
-    return(
+
+    return (
 
         <>
-        <div className="products-bg">
-            <div className="top-content">
-                <h1>POC Radio - T320</h1>
-          
-                <Breadcrumbs aria-label="breadcrumb">
-                    <Link underline="hover" color="inherit" href="/">
-                    Home
-                    </Link>
-                    <Link
-                    underline="hover"
-                    color="inherit"
-                    href="/productos/radios"
-                    >
-                    Radios
-                    </Link>
-                    <Typography color="text.primary">T320</Typography>
-                </Breadcrumbs>
-              
-            </div>
+            <div className="products-bg">
+                <div className="top-content">
+                    <h1>POC Radio - T320</h1>
 
-            <Grid sx={{padding:"3rem"}} container spacing={5} >
+                    <Breadcrumbs aria-label="breadcrumb">
+                        <Link underline="hover" color="inherit" href="/">
+                            Home
+                        </Link>
+                        <Link
+                            underline="hover"
+                            color="inherit"
+                            href="/productos/radios"
+                        >
+                            Radios
+                        </Link>
+                        <Typography color="text.primary">T320</Typography>
+                    </Breadcrumbs>
+
+                </div>
+
+                <Grid sx={{ padding: "3rem" }} container spacing={5} >
                     <Grid item xs={12} md={5}>
                         <div className="images-productos">
                             <AwesomeSlider>
-                            <div>
-                            <img src={lat} className='slide' alt='t320-lat' />
-                            </div>
-                            <div>
-                            <img src={front} className='slide' alt='t320-front' />
-                            </div>
-                            <div>
-                            <img src={sup} className='slide' alt='t320-sup' />
-                            </div>
+                                <div>
+                                    <img src={lat} className='slide' alt='t320-lat' />
+                                </div>
+                                <div>
+                                    <img src={front} className='slide' alt='t320-front' />
+                                </div>
+                                <div>
+                                    <img src={sup} className='slide' alt='t320-sup' />
+                                </div>
                             </AwesomeSlider>
                         </div>
                     </Grid >
@@ -153,27 +155,25 @@ export default function Radiot320View(){
                             <h3>Características</h3>
                             <ul className='list-content-t320'>
                                 <li>
-                                   <LocationOnIcon/> Posicionamiento GPS
+                                    <LocationOnIcon /> Posicionamiento GPS
                                 </li>
                                 <li>
-                                  <PhoneAndroidIcon/>  Pantalla Táctil
+                                    <PhoneAndroidIcon />  Pantalla Táctil
                                 </li>
                                 <li>
-                                 <SimCardIcon/>   Doble Tarjeta Sim
+                                    <SimCardIcon />   Doble Tarjeta Sim
                                 </li>
                                 <li>
-                                <KeyboardVoiceIcon/>  Video/Voz/ Mensajes
+                                    <KeyboardVoiceIcon />  Video/Voz/ Mensajes
                                 </li>
                                 <li>
-                                   <CameraAltIcon/> Cámara frontal de 2,0 MP, cámara trasera de 8,0 MP
+                                    <CameraAltIcon /> Cámara frontal de 2,0 MP, cámara trasera de 8,0 MP
                                 </li>
                                 <li>
-                                    <WifiIcon/> Conexión WIFI (Adaptable:NFC)
+                                    <WifiIcon /> Conexión WIFI (Adaptable:NFC)
                                 </li>
                             </ul>
-                            <Button variant="outlined" onClick={handleClickOpen} >
-                                    Cotizar
-                                </Button>
+                            <FormularioCotizacion />
                         </div>
                     </Grid >
                     <Grid item xs={12} md={12}>
@@ -242,124 +242,45 @@ export default function Radiot320View(){
                                     </TableContainer>
                                 </CustomTabPanel>
                                 <CustomTabPanel value={value} index={1}>
-                                <ul>
-                                <li>
-                                    Intercomunicador a nivel mundial
-                                </li>
-                                <li>
-                                    Cámara frontal y trasera con función de enfoque automático
-                                </li>
-                                <li>
-                                    Tiempo de espera de más de 80 horas.
-                                </li>
-                                <li>
-                                    Tiempo de trabajo aproximado 9 horas.
-                                </li>
-                                <li>
-                                    Altavoz Ø36mm, 8Ω 2W.
-                                </li>
-                                <li>
-                                    Plataforma para registro de posicionamiento GPS.
-                                </li>
-                                <li>
-                                    Compatible con WIFI, BT
-                                </li>
-                                <li>
-                                    Línea de datos Micro 5PIN
-                                </li>
-                                <li>
-                                    Alta resistencia a caídas
-                                </li>
-                            </ul>
+                                    <ul>
+                                        <li>
+                                            Intercomunicador a nivel mundial
+                                        </li>
+                                        <li>
+                                            Cámara frontal y trasera con función de enfoque automático
+                                        </li>
+                                        <li>
+                                            Tiempo de espera de más de 80 horas.
+                                        </li>
+                                        <li>
+                                            Tiempo de trabajo aproximado 9 horas.
+                                        </li>
+                                        <li>
+                                            Altavoz Ø36mm, 8Ω 2W.
+                                        </li>
+                                        <li>
+                                            Plataforma para registro de posicionamiento GPS.
+                                        </li>
+                                        <li>
+                                            Compatible con WIFI, BT
+                                        </li>
+                                        <li>
+                                            Línea de datos Micro 5PIN
+                                        </li>
+                                        <li>
+                                            Alta resistencia a caídas
+                                        </li>
+                                    </ul>
                                 </CustomTabPanel>
-                            
+
                             </Box>
                         </div>
                     </Grid >
                 </Grid >
-                
-        </div>
-        <Dialog open={open} onClose={handleClose}>
-                <DialogTitle>Cotizacion</DialogTitle>
-                <DialogContent>
-                    <Stack spacing={2}>
-                        <p>
-                            Llene el formulario de cotizacion y un asesor de ventas se contactara con usted, por correo
-                            o directamente por su numero de telefono.
-                        </p>
-                        <Stack direction={"row"} spacing={2}>
-                            <TextField
-                                required
-                                id="outlined-required"
-                                label="Nombre"
-                                type="text"
-                                fullWidth
-                                onChange={(event) => {
-                                    setNombre(event.target.value);
-                                }}
-                            />
-                            <TextField
-                                required
-                                id="outlined-required"
-                                label="Apellido"
-                                type="text"
-                                fullWidth
-                                onChange={(event) => {
-                                    setApellido(event.target.value);
-                                }}
-                            />
-                        </Stack>
-                        <TextField
-                            required
-                            id="outlined-required"
 
-                            label="Direccion de Correo"
-                            InputProps={{
-                                startAdornment: (
-                                    <InputAdornment position="start">
-                                        <EmailIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
-                            onChange={(event) => {
-                                setEmail(event.target.value);
-                            }}
-                            type="email"
-                        />
-                        <TextField
-                            required
-                            id="outlined-required"
+            </div>
 
-                            label="Telefono"
-                            InputProps={{
-                                startAdornment: (
-                                    <InputAdornment position="start">
-                                        <PhoneEnabledIcon />
-                                    </InputAdornment>
-                                ),
-                            }}
-                            onChange={(event) => {
-                                setNumero(event.target.value);
-                            }}
-                            type="email"
-                        />
-                        <TextField
-                            id="outlined-multiline-flexible"
-                            label="Mensaje"
-                            multiline
-                            maxRows={4}
-                            onChange={(event) => {
-                                setMensaje(event.target.value);
-                            }}
-                        />
-                    </Stack>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose}>Cancel</Button>
-                    <Button onClick={enviarEmailJs}>Cotizar</Button>
-                </DialogActions>
-            </Dialog>
-        
+
         </>
     );
 
