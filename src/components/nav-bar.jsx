@@ -163,13 +163,13 @@ const menu_data = [
 			},
 		]
 	},
-	{
-		name: "Casos de Éxito",
-		path: "/blog",
-		child: false,
-		icon: <ThumbUpAltSharpIcon />,
-		childrens: []
-	},
+	// {
+	// 	name: "Casos de Éxito",
+	// 	path: "/blog",
+	// 	child: false,
+	// 	icon: <ThumbUpAltSharpIcon />,
+	// 	childrens: []
+	// },
 	{
 		name: "Acerca de Nosotros",
 		path: "/acerca_nosotros",

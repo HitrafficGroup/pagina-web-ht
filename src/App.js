@@ -15,6 +15,7 @@ import BodyCamView from './views/bodycam-view';
 import Tm7View from './views/tm7-view';
 import SemaforizacionView from './views/semaforizacion-view';
 import ProductosMecanicos from './views/productos-mecanicos';
+import PlataformaView from './views/plataforma-view';
 function App() {
   return (
     <>
@@ -35,6 +36,7 @@ function App() {
                 <Route path='/productos/semaforos' element={<SemaforosView />} />
                 <Route path='/productos/metalica' element={<ProductosMecanicos />} />
                 <Route path='/servicios/semaforizacion' element={<SemaforizacionView />} />
+                <Route path='/servicios/plataforma' element={<PlataformaView />} />
                 <Route path='*' element={<NotFound />} />
                 
               </Routes>
