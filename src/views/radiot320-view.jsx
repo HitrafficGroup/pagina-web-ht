@@ -76,34 +76,9 @@ export default function Radiot320View() {
 
     const [value, setValue] = useState(0);
     const [open, setOpen] = useState(false);
-    const [numero, setNumero] = useState("");
-    const [email, setEmail] = useState("");
-    const [nombre, setNombre] = useState("");
-    const [apellido, setApellido] = useState("");
-    const [mensaje, setMensaje] = useState("");
 
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-    const enviarEmailJs = () => {
-        const templateParams = {
-            from_name: `${nombre} ${apellido}`,
-            message: mensaje,
-            numero: numero,
-            correo: email,
-            producto: "Radio320"
-        };
-        emailjs.send('service_5ta3uir', 'template_sg3oltu', templateParams, '__kIJxAY6uzbb1RzE').then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-        }, (err) => {
-            console.log('FAILED...', err);
-        });
-        setOpen(false);
-    }
 
-    const handleClose = () => {
-        setOpen(false);
-    };
+    
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
