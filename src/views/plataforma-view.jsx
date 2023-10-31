@@ -6,15 +6,7 @@ import plataformaUso from "../assets/uso_plataforma.jpg";
 import { Button } from "@mui/material";
 
 
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
-import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
-import InputAdornment from '@mui/material/InputAdornment';
-import EmailIcon from '@mui/icons-material/Email';
-import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
+
 import emailjs from '@emailjs/browser';
 import FormularioCotizacion from "../components/formulario-cotizacion";
 

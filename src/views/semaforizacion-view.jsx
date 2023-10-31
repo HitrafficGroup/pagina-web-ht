@@ -9,7 +9,8 @@ import ObraCivil from '../assets/obra-civil.jpg';
 import Container from '@mui/material/Container';
 import instaleishon from '../assets/instalacion.png';
 import Stack from '@mui/material/Stack';
-import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+
+import FormularioCotizacion from "../components/formulario-cotizacion";
 export default function SemaforizacionView() {
 
 
@@ -106,11 +107,7 @@ export default function SemaforizacionView() {
                                 <h2> Cotiza con nosotros</h2>
                                 </Grid>
                                 <Grid item xs={12}  md={12}>
-                                    <div style={{width:"100%",justifyContent:"center",display:"flex"}}>
-                                        <Button variant="contained" color="cotizar" endIcon={<MonetizationOnIcon />}>
-                                            Cotizar
-                                        </Button>
-                                    </div>
+                                        <FormularioCotizacion/>
                                 </Grid>
                                 <Grid item xs={12}>
                                     <div style={{ height: 40 }}>

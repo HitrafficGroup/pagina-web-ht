@@ -92,33 +92,30 @@ export default function HomeViewV2() {
                     <h2 >PRINCIPALES SERVICIOS</h2>
                 </div>
                 <div className="card-home-container">
-                    <Grid container >
-                        <Grid item xs={12} md={3}>
-                            <CardService  icon={<SupportAgentIcon sx={{fontSize:70}} /> }   title={"SOPORTE TECNICO"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
-                        </Grid >
-                        <Grid item xs={12} md={3}>
-                            <CardService  icon={<EngineeringOutlinedIcon sx={{fontSize:70}} /> }   title={"INGENIERIA DE TRAFICO"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
+                    <Grid container spacing={4} >
+                        <Grid item xs={12} md={4}>
+                            <CardService  icon={<SupportAgentIcon sx={{fontSize:70}} /> }   title={"SOPORTE TÉCNICO"}  text={"Nuestra cartera de clientes dispone de soporte gratuito y personalizado a nuestros diferentes productos."}  />
                         </Grid>
-                        <Grid item xs={12} md={3}>
-                            <CardService  icon={<LogoDevOutlinedIcon sx={{fontSize:70}} /> }   title={"DESARROLLO DE SOFTWARE"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
+                        <Grid item xs={12} md={4}>
+                            <CardService  icon={<EngineeringOutlinedIcon sx={{fontSize:70}} /> }   title={"SEMAFORIZACIÓN"}  text={"Desarrollamos proyectos de semaforización adaptados a las especificaciones de su entorno urbano."}  />
                         </Grid>
-                        <Grid item xs={12} md={3}>
-                            <CardService  icon={<ConstructionOutlinedIcon sx={{fontSize:70}} /> }   title={"DISEÑO MECANICO"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
+                        <Grid item xs={12} md={4}>
+                            <CardService  icon={<LogoDevOutlinedIcon sx={{fontSize:70}} /> }   title={"DESARROLLO DE SOFTWARE"}  text={"Disponemos de personal capacitado en el área de desarrollo de software con el objetivo de realizar herramientas informáticas que faciliten su vida."}  />
                         </Grid>
+                       
                     </Grid>
-                    <Grid container >
-                        <Grid item xs={12} md={3}>
-                            <CardService  icon={<FlightTakeoffOutlinedIcon sx={{fontSize:70}} /> }   title={"IMPORTACIONES"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
-                        </Grid >
-                        <Grid item xs={12} md={3}>
-                            <CardService  icon={<RvHookupOutlinedIcon sx={{fontSize:70}} /> }   title={"PLATAFORMA DE ELEVACION"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
+
+                    <Grid container style={{marginTop:5}} >
+                        <Grid item xs={12} md={4}>
+                            <CardService  icon={<FlightTakeoffOutlinedIcon sx={{fontSize:70}} /> }   title={"SISTEMAS DE TELECOMUNICACIONES"}  text={"Explora nuestro catálogo de radios, ideales para trabajo de campo."}  />
                         </Grid>
-                        <Grid item xs={12} md={3}>
-                            <CardService  icon={<CloudSyncOutlinedIcon sx={{fontSize:70}} /> }   title={"SISTEMAS IOT INDUSTRIALES"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
+                        <Grid item xs={12} md={4}>
+                            <CardService  icon={<RvHookupOutlinedIcon sx={{fontSize:70}} /> }   title={"SEÑÁLETICA CON LUZ"}  text={"Fabricamos todo tipo de señales tanto viales como publicitarias , con iluminación programable"}  />
                         </Grid>
-                        <Grid item xs={12} md={3}>
-                            <CardService  icon={<SmartToyOutlinedIcon sx={{fontSize:70}} /> }   title={"MACHINE LEARNING"}  text={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque nulla nihil iusto molestiae dolores et doloribus quaerat cum ab ea"}  />
+                        <Grid item xs={12} md={4}>
+                            <CardService  icon={<CloudSyncOutlinedIcon sx={{fontSize:70}} /> }   title={"AUTOMATIZACIÓN INDUSTRIAL"}  text={"Realizamos proyectos de ingenieria en el campo industrial."}  />
                         </Grid>
+                        
                     </Grid>
                     <div style={{height:50}}>
 

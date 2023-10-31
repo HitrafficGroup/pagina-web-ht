@@ -10,6 +10,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 import emailjs from '@emailjs/browser';
 import { Button } from "@mui/material";
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 export default function FormularioCotizacion() {
 
     const [open, setOpen] = useState(false);
@@ -126,9 +127,12 @@ export default function FormularioCotizacion() {
                     <Button onClick={enviarEmailJs}>Cotizar</Button>
                 </DialogActions>
             </Dialog>
-            <Button color="primary" variant="outlined" onClick={handleClickOpen} >
-                cotizar
-            </Button>
+
+            <div style={{width:"100%",justifyContent:"center",display:"flex"}}>
+                                        <Button variant="contained" color="cotizar" endIcon={<MonetizationOnIcon />} onClick={handleClickOpen}>
+                                            Cotizar
+                                        </Button>
+                                    </div>
         </>
     );
 }
