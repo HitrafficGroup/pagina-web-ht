@@ -5,13 +5,11 @@ import Grid from '@mui/material/Grid';
 import CardService from "../components/card-service";
 import EngineeringOutlinedIcon from '@mui/icons-material/EngineeringOutlined';
 import LogoDevOutlinedIcon from '@mui/icons-material/LogoDevOutlined';
-import ConstructionOutlinedIcon from '@mui/icons-material/ConstructionOutlined';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import SimpleBar from 'simplebar-react';
-import FlightTakeoffOutlinedIcon from '@mui/icons-material/FlightTakeoffOutlined';
 import RvHookupOutlinedIcon from '@mui/icons-material/RvHookupOutlined';
-import CloudSyncOutlinedIcon from '@mui/icons-material/CloudSyncOutlined';
-import SmartToyOutlinedIcon from '@mui/icons-material/SmartToyOutlined';
+import FactoryIcon from '@mui/icons-material/Factory';
+import PodcastsIcon from '@mui/icons-material/Podcasts';
 import 'simplebar-react/dist/simplebar.min.css';
 export default function HomeViewV2() {
 
@@ -107,13 +105,13 @@ export default function HomeViewV2() {
 
                     <Grid container style={{marginTop:5}} >
                         <Grid item xs={12} md={4}>
-                            <CardService  icon={<FlightTakeoffOutlinedIcon sx={{fontSize:70}} /> }   title={"SISTEMAS DE TELECOMUNICACIONES"}  text={"Explora nuestro catálogo de radios, ideales para trabajo de campo."}  />
+                            <CardService  icon={<PodcastsIcon sx={{fontSize:70}} /> }   title={"SISTEMAS DE TELECOMUNICACIONES"}  text={"Explora nuestro catálogo de radios, ideales para trabajo de campo."}  />
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <CardService  icon={<RvHookupOutlinedIcon sx={{fontSize:70}} /> }   title={"SEÑÁLETICA CON LUZ"}  text={"Fabricamos todo tipo de señales tanto viales como publicitarias , con iluminación programable"}  />
                         </Grid>
                         <Grid item xs={12} md={4}>
-                            <CardService  icon={<CloudSyncOutlinedIcon sx={{fontSize:70}} /> }   title={"AUTOMATIZACIÓN INDUSTRIAL"}  text={"Realizamos proyectos de ingenieria en el campo industrial."}  />
+                            <CardService  icon={<FactoryIcon sx={{fontSize:70}} /> }   title={"AUTOMATIZACIÓN INDUSTRIAL"}  text={"Realizamos proyectos de ingenieria en el campo industrial."}   />
                         </Grid>
                         
                     </Grid>

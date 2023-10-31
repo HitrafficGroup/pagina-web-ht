@@ -110,7 +110,7 @@ export default function Radio300View() {
                                 </div>
                             </AwesomeSlider>
                         </div>
-                    </Grid >
+                    </Grid>
                     <Grid item xs={12} md={7}>
                         <div className='description-productos'>
                             <h3>Características</h3>
@@ -139,7 +139,7 @@ export default function Radio300View() {
                                     <FormularioCotizacion />
                                
                         </div>
-                    </Grid >
+                    </Grid>
                     <Grid item xs={12} md={12}>
                         <div className='body-productos'>
                             <Box sx={{ width: '100%' }}>
@@ -240,8 +240,8 @@ export default function Radio300View() {
 
                             </Box>
                         </div>
-                    </Grid >
-                </Grid >
+                    </Grid>
+                </Grid>
 
             </div>
            

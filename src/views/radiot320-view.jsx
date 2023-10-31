@@ -23,18 +23,6 @@ import SimCardIcon from '@mui/icons-material/SimCard';
 import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import WifiIcon from '@mui/icons-material/Wifi';
-import Button from '@mui/material/Button';
-
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
-import TextField from '@mui/material/TextField';
-import Stack from '@mui/material/Stack';
-import InputAdornment from '@mui/material/InputAdornment';
-import EmailIcon from '@mui/icons-material/Email';
-import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
-import emailjs from '@emailjs/browser';
 import FormularioCotizacion from '../components/formulario-cotizacion';
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -124,7 +112,7 @@ export default function Radiot320View() {
                                 </div>
                             </AwesomeSlider>
                         </div>
-                    </Grid >
+                    </Grid>
                     <Grid item xs={12} md={7}>
                         <div className='description-productos'>
                             <h3>Características</h3>
@@ -150,7 +138,7 @@ export default function Radiot320View() {
                             </ul>
                             <FormularioCotizacion />
                         </div>
-                    </Grid >
+                    </Grid>
                     <Grid item xs={12} md={12}>
                         <div className='body-productos'>
                             <Box sx={{ width: '100%' }}>
@@ -250,8 +238,8 @@ export default function Radiot320View() {
 
                             </Box>
                         </div>
-                    </Grid >
-                </Grid >
+                    </Grid>
+                </Grid>
 
             </div>
 
