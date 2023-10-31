@@ -23,6 +23,12 @@ const theme = createTheme({
     },
     menu:{
       main:"#85929E"
+    },
+    white:{
+      main:"#FDFEFE"
+    },
+    cotizar:{
+      main:"#F4D03F",
     }
   },
 });
