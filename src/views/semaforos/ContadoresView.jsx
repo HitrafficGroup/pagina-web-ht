@@ -2,9 +2,13 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
-import lat from "../../assets/4.png";
-import front from "../../assets/8.png";
-import pos from "../../assets/16.png";
+
+import lat from "../../assets/contadores/11.png";
+import front from "../../assets/contadores/17.png";
+import pos from "../../assets/contadores/18.png";
+import back from "../../assets/contadores/19.png";
+import top from "../../assets/contadores/20.png";
+
 import AwesomeSlider from 'react-awesome-slider';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -14,16 +18,8 @@ import React, { useState } from "react";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import Button from '@mui/material/Button';
 import TableRow from '@mui/material/TableRow';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import Paper from '@mui/material/Paper';
-import SimCardIcon from '@mui/icons-material/SimCard';
-import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
-import WifiIcon from '@mui/icons-material/Wifi';
+
 
 
 import FormularioCotizacion from '../../components/formulario-cotizacion';
@@ -62,7 +58,7 @@ function a11yProps(index) {
 
 
 
-export default function VehicularesView() {
+export default function ContadoresView() {
 
 
     const [value, setValue] = useState(0);
@@ -76,7 +72,7 @@ export default function VehicularesView() {
         <>
             <div className="products-bg">
                 <div className="top-content">
-                    <h1>Semaforos vehiculraes 3 x 300mm</h1>
+                    <h1>Contadores</h1>
 
                     <Breadcrumbs aria-label="breadcrumb">
                         <Link underline="hover" color="inherit" href="/">
@@ -87,9 +83,9 @@ export default function VehicularesView() {
                             color="inherit"
                             href="/productos/semaforos"
                         >
-                            Semaforos
+                           Contadores
                         </Link>
-                        <Typography color="text.primary">semaforos vehiculares</Typography>
+                        <Typography color="text.primary">Contadores Vehiculares</Typography>
                     </Breadcrumbs>
 
 
@@ -100,13 +96,19 @@ export default function VehicularesView() {
                         <div className="images-productos">
                             <AwesomeSlider>
                                 <div>
-                                    <img src={front} className='slide' alt='s300-front' />
+                                    <img src={front} className='slide' alt='contadores de 3 digitos' />
                                 </div>
                                 <div>
-                                    <img src={lat} className='slide' alt='s300-lat' />
+                                    <img src={lat} className='slide' alt='contadores con persona en rojo' />
                                 </div>
                                 <div>
-                                    <img src={pos} className='slide' alt='s300-pos' />
+                                    <img src={pos} className='slide' alt='contador un digito' />
+                                </div>
+                                <div>
+                                    <img src={back} className='slide' alt='contador visera redonda' />
+                                </div>
+                                <div>
+                                    <img src={top} className='slide' alt='contador dos digitos' />
                                 </div>
                             </AwesomeSlider>
                         </div>
@@ -115,17 +117,18 @@ export default function VehicularesView() {
                         <div className='description-productos'>
                             <h3>Resumen: </h3>
                             <p>
-                                Pantalla de contraste de aluminio compuesta por cuatro piezas para prevenir trizaduras y facilitar el mantenimiento.
-                                actualmente este tipo de semaforos se encuentra en 3 presentaciones:
+                                se disponen diferentes contadores en varias gamas  con visera rectangular o circular,
+                                de acuerdo a las necesidades del cliente.
                             </p>
                             <ul>
-                                <li>Semáforo con contador.</li>
-                                <li>Semáforo con bicicleta.</li>
-                                <li>Semáforo con flecha.</li>
-                                <li>Semáforo simple.</li>
+                                <li>Contador de 3 digitos.</li>
+                                <li>Contador de 2 digitos.</li>
+                                <li>Contador de 1 digito.</li>
                             </ul>
                             <p>
-                                Los semáforos vehiculares de Hitraffic cuentan con un diseño modular que permite la combinación de módulos según las necesidades del cliente, ya sea para funciones de contador, bicicleta o flecha.
+                                Los semáforos peatonales se disponen en versiones modulares de 2 piezas,
+                                los tamaños modulares de las cajas de los semáforos pueden ser de 200mm o 300mm.
+                                
                             </p>
                             <FormularioCotizacion />
 

@@ -2,28 +2,22 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
-import lat from "../../assets/4.png";
-import front from "../../assets/8.png";
-import pos from "../../assets/16.png";
+
+import lat from "../../assets/lunas/3.png";
+import front from "../../assets/lunas/7.png";
+
 import AwesomeSlider from 'react-awesome-slider';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import PropTypes from 'prop-types';
+
 import React, { useState } from "react";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import Button from '@mui/material/Button';
 import TableRow from '@mui/material/TableRow';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
-import Paper from '@mui/material/Paper';
-import SimCardIcon from '@mui/icons-material/SimCard';
-import KeyboardVoiceIcon from '@mui/icons-material/KeyboardVoice';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
-import WifiIcon from '@mui/icons-material/Wifi';
+
 
 
 import FormularioCotizacion from '../../components/formulario-cotizacion';
@@ -62,7 +56,7 @@ function a11yProps(index) {
 
 
 
-export default function VehicularesView() {
+export default function LunasView(){
 
 
     const [value, setValue] = useState(0);
@@ -70,14 +64,11 @@ export default function VehicularesView() {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-
     return (
-
         <>
             <div className="products-bg">
                 <div className="top-content">
-                    <h1>Semaforos vehiculraes 3 x 300mm</h1>
-
+                    <h1>Lunas aparte</h1>
                     <Breadcrumbs aria-label="breadcrumb">
                         <Link underline="hover" color="inherit" href="/">
                             Home
@@ -89,7 +80,7 @@ export default function VehicularesView() {
                         >
                             Semaforos
                         </Link>
-                        <Typography color="text.primary">semaforos vehiculares</Typography>
+                        <Typography color="text.primary">Contadores Vehiculares</Typography>
                     </Breadcrumbs>
 
 
@@ -100,13 +91,10 @@ export default function VehicularesView() {
                         <div className="images-productos">
                             <AwesomeSlider>
                                 <div>
-                                    <img src={front} className='slide' alt='s300-front' />
+                                    <img src={front} className='slide' alt='luna normal' />
                                 </div>
                                 <div>
-                                    <img src={lat} className='slide' alt='s300-lat' />
-                                </div>
-                                <div>
-                                    <img src={pos} className='slide' alt='s300-pos' />
+                                    <img src={lat} className='slide' alt='lunas lat' />
                                 </div>
                             </AwesomeSlider>
                         </div>
@@ -115,17 +103,16 @@ export default function VehicularesView() {
                         <div className='description-productos'>
                             <h3>Resumen: </h3>
                             <p>
-                                Pantalla de contraste de aluminio compuesta por cuatro piezas para prevenir trizaduras y facilitar el mantenimiento.
-                                actualmente este tipo de semaforos se encuentra en 3 presentaciones:
+                                Hitraffic SAS dispone de lunas listas para ensamblar en los modulos  de semaforos vehiculares o peatonales.
                             </p>
-                            <ul>
-                                <li>Semáforo con contador.</li>
-                                <li>Semáforo con bicicleta.</li>
-                                <li>Semáforo con flecha.</li>
-                                <li>Semáforo simple.</li>
-                            </ul>
+                                <ul>
+                                    <li>Lunas con flecha.</li>
+                                    <li>Lunas normales.</li>
+                                    <li>Lunas con contador</li>
+                                </ul>
                             <p>
-                                Los semáforos vehiculares de Hitraffic cuentan con un diseño modular que permite la combinación de módulos según las necesidades del cliente, ya sea para funciones de contador, bicicleta o flecha.
+                                Los semáforos peatonales se disponen en versiones modulares de 2 piezas,
+                                los tamaños modulares de las cajas de los semáforos pueden ser de 200mm o 300mm.
                             </p>
                             <FormularioCotizacion />
 

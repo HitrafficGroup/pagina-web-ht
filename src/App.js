@@ -17,6 +17,10 @@ import SemaforizacionView from './views/semaforizacion-view';
 import ProductosMecanicos from './views/productos-mecanicos';
 import PlataformaView from './views/plataforma-view';
 import VehicularesView from './views/semaforos/vehicularesView';
+import PeatonalesView from './views/semaforos/PeatonalesView';
+import ContadoresView from './views/semaforos/ContadoresView';
+import LunasView from './views/semaforos/LunasView';
+
 function App() {
   return (
     <>
@@ -36,9 +40,9 @@ function App() {
                 <Route path='/productos/radios/bodycam' element={<BodyCamView />} />
                 <Route path='/productos/semaforos' element={<SemaforosView />} />
                 <Route path='/productos/semaforos/vehiculares' element={<VehicularesView />} />
-                <Route path='/productos/semaforos/peatonales' element={<VehicularesView />} />
-                <Route path='/productos/semaforos/contadores' element={<VehicularesView />} />
-                <Route path='/productos/semaforos/lunas' element={<VehicularesView />} />
+                <Route path='/productos/semaforos/peatonales' element={<PeatonalesView />} />
+                <Route path='/productos/semaforos/contadores' element={<ContadoresView />} />
+                <Route path='/productos/semaforos/lunas' element={<LunasView />} />
                 <Route path='/productos/semaforos/ht200' element={<VehicularesView />} />
                 <Route path='/productos/semaforos/ht96' element={<VehicularesView />} />
                 <Route path='/productos/metalica' element={<ProductosMecanicos />} />
